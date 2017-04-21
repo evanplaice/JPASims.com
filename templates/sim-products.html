@@ -1,0 +1,83 @@
+{% extends '_base.html' %}
+{% set bodytitle='Flight Simulator Products' %}
+{% block page_style %}
+<style>
+.prd {
+position:relative;
+width:100%;
+height:auto;
+display:inline;
+float:left;
+margin-bottom:10px;
+background:url("/hr.gif") no-repeat bottom;
+}
+
+.prdtitle {
+position:relative;
+width:auto;
+height:25px;
+overflow:hidden;
+padding-left:10px;
+margin-bottom:10px;
+background:url("/hr.gif") no-repeat bottom;
+font-size:17px;
+font-weight:bold;
+}
+
+.prdpic {
+position:relative;
+width:128px;
+height:128px;
+float:left;
+margin:0px 20px 0px 10px;
+background-image:url('/product_icons.gif');
+background-repeat: no-repeat;
+}
+</style>
+{% endblock %}
+{% block page_content %}
+<div class="prd">
+  <div class="prdtitle">TCAS (Traffic Collision Avoidance System)</div>
+  <div class="prdpic"></div>
+  <div class="p1">The Simulated TCAS system is designed as a "Bolt On" system with all hardware components contained in the Industrial PC and Special TCAS Interface Unit.</div>
+  <div class="p1">This arrangment:
+    <ul>
+      <li>Allows easy installation and integration into the Simulator with no Training downtime</li>
+      <li>Provides a complete COTS (Commercial Off The Shelf) hardware package</li>
+      <li>Provides an Industrial PC platform which can be utilized to host other simulator systems (EGPWS, GPS, Radio Aids Compiler, QTG System, etc.)</li>
+    </ul>
+  </div>
+  <div class="p1">This system is currently operating on 25 simulators worldwide.  The Latest TCAS II Version 7 is now available.  The high time system has operated for over 24,000 hours without a single failure.</div>
+  <a class="detail" href="/tcas">Click Here for Details</a>
+</div>
+<div class="prd">
+  <div class="prdtitle">EGPWS (Enhanced Ground Proximity Warning System)</div>
+  <div class="prdpic" style="background-position: 0px -128px;"></div>
+  <div class="p1">Currently Under Construction</div>
+  <!--<a class="detail" href="/egpws">Click Here for Details</a>-->
+</div>
+<div class="prd">
+  <div class="prdtitle">Weather Radar</div>
+  <div class="prdpic" style="background-position: 0px -256px;"></div>
+  <div class="p1">Currently Under Construction</div>
+  <!--<a class="detail" href="/weather-radar">Click Here for Details</a>-->
+</div>
+<div class="prd">
+  <div class="prdtitle">RACS Radio Aids</div>
+  <div class="prdpic" style="background-position: 0px -384px;"></div>
+  <div class="p1">Currently Under Construction</div>
+  <!--<a class="detail" href="/racs">Click Here for Details</a>-->
+</div>
+<div class="prd">
+  <div class="prdtitle">RIOS (Replacement Instructor Operating System)</div>
+  <div class="prdpic" style="background-position: 0px -512px;"></div>
+  <div class="p1">A new JPA product, the Replacement Instructor Operator System (RIOS) was launched at the recent FSEMC Conference in Montreal.   A dual touchscreen demonstration system was on display interacting with a "quasi-simulation" program running to demonstration integration to a host computer.  The RIOS is a low cost COTS (Commercial Off-The-Shelf) solution which is capable of replacing any IOS system operating today.</div>
+  <a class="detail" href="/rios">Click Here for Details</a>
+</div>
+<div class="prd">
+  <div class="prdtitle">LTN-92</div>
+  <div class="prdpic" style="background-position: 0px -640px;"></div>
+  <div class="p1">Currently Under Construction</div>
+  <!--<a class="detail" href="/ltn-92">Click Here for Details</a>-->
+</div>
+{% endblock %}

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE news [
+  <!ELEMENT entry     (date|content)>
+  <!ELEMENT date		  (#PCDATA)>
+  <!ELEMENT content 	(text?|listtitle?|bullets?|numbered?)>
+  <!ELEMENT text		  (#PCDATA)>
+  <!ELEMENT listtitle	(#PCDATA)>
+  <!ELEMENT bullets 	(bullet)>
+  <!ELEMENT numbered	(bullet)>
+]>
+
+<news>
+  <entry>
+    <date>April 01, 2008</date>
+    <content>
+      <listtitle>New Inventory</listtitle>
+      <bullets>
+        <li>Huge Lot of Singer Link linkage PCB's</li>
+      </bullets>
+    </content>
+  </entry>
+  <entry>
+    <date>March 18, 2008</date>
+    <content>
+      <text>My apologies for the delay on updates.  We have recently acquired a huge lot of inventory and a warehouse space to store it.</text>
+      <text>The 'Devices For Sale' page is finally up and running. Be sure to check it out.</text>
+      <text>There is a new diagram showing the hardware layout of the RIOS that can be found on the 'Sim Products' page.</text>
+      <text>The 'Products For Sale' page can now be sorted by packages of related parts.</text>
+      <listtitle>New Inventory</listtitle>
+      <bullets>
+        <li>Vital IV Single Channel - Found under Parts</li>
+        <li>Encore Gould Equipment - Found under Parts</li>
+        <li>Singer Link AST Test Bench - Found under Devices</li>
+      </bullets>
+      <listtitle>Soon to come</listtitle>
+      <bullets>
+        <li>'Training' - It's on the list...</li>
+        <li>Huge Lot of AST Circuit Cards, Dimmers, Power Supplies, etc... - Found under Parts</li>
+      </bullets>
+    </content>
+  </entry>
+  <entry>
+    <date>January 29, 2008</date>
+    <content>
+      <text>Many improvements have been added throughout the site.</text>
+      <text>The 'Parts For Sale' page is up and running. Be sure to check it out.</text>
+      <text>There is a 3 channel E&amp;S 3000 Series Image Generator complete except for software and disk drive(s) for sale on the 'Parts For Sale' page.</text>
+      <listtitle>Soon to come</listtitle>
+      <bullets>
+        <li>The 'Devices For Sale' page including some door trainers for sale</li>
+        <li>The 'Training' page complete with the training services available through JPA</li>
+      </bullets>
+    </content>
+  </entry>
+  <entry>
+    <date>December 28, 2007</date>
+    <content>
+      <listtitle>Some new updates for Early Winter 2007</listtitle>
+      <numbered>
+        <li>A new section has been added for the Replacement Instructor Operator's Station (RIOS), a new product which is capable of replacing any legacy IOS system currently operating, or being a basic item for new device builds</li>
+        <li>A new section for the TCAS system has been added, detailing specific technical content and description</li>
+        <li>A new sim, a CAE MD-11 FFS has been added in the Sims For Sale section</li>
+      </numbered>
+      <text>A number of enhancements to the site have been accomplished including "Auto-Resolution" formatting, Technical Specs being converted to PDF format and general speed improvements.</text>
+      <text>All of us at JPA hope everyone out there enjoyed a wonderful Holiday Season and are looking forward to a Great New Year.</text>
+    </content>
+  </entry>
+  <entry>
+    <date>October 25, 2007</date>
+    <content>
+      <listtitle>Some new updates for the Fall of 2007</listtitle>
+      <bullets>
+        <li>A new Press Release concerning the award of the AeroService B747-300 Certification Update which was awarded in early October to JPA and is scheduled to be completed in early Spring 2008</li>
+        <li>The further development of our Sim Products Page will continue over the next month</li>
+        <li>As the result of the launch of the JPA Replacement Instructor Operators Station (RIOS) at the FSEMC Conference in Montreal, information regarding RIOS will be developed and added on its own page under the Sim Products page</li>
+        <li>Changing status of the B767-300ER from "Available" to "Sold"</li>
+      </bullets>
+    </content>
+  </entry>
+  <entry>
+    <date>January 28, 2007</date>
+    <content>
+      <listtitle>There are a number of additions to the website to start the New Year</listtitle>
+      <bullets>
+        <li>A Press Release regarding the completion of two major Avionics Upgrades to the Atlas B747-200 #1 and #2 simulators which added LTN-92, TAWS, GPS, and rehosted the TCAS system.</li>
+        <li>Listing for sale of the KLM B767-300ER simulator</li>
+        <li>Listing for sale of the KLM B737-300 EFIS simulator</li>
+      </bullets>
+      <text>Please visit the 'Sims For Sale' page to see details.</text>
+    </content>
+  </entry>
+  <entry>
+    <date>July 30, 2006</date>
+    <content>
+      <text>The site has had considerable improvements over the past month.  Our first press release on the Kalitta Air Project is finally up.</text>
+      <text>There is also a new page that describes some of the consulting services we offer.</text>
+      <text>Soon to come... a resource link page with info on specialized tooling and hardware that is both necessary and hard to find.</text>
+    </content>
+  </entry>
+  <entry>
+    <date>June 14, 2006</date>
+    <content>
+      <text>The Kalitta 747-200/300 project moved today from the 'Pending Certification Inspection' to the 'Certified' clasisification with the completion of the FAA's initial certification inspection and Qualification  of the simulator as a Lelvel C Full Flight Simulator.  For more details on the considerable update involved go to our 'Projects' page, under the 'Kalitta Update Project,' and select details.</text>
+    </content>
+  </entry>
+  <entry>
+    <date>June 13, 2006</date>
+    <content>
+      <text>The site is undergoing massive changes as usual (unfortunately... most of which you can't see). More and more information is being added regularly.</text>
+    </content>
+  </entry>
+  <entry>
+    <date>June 8, 2006</date>
+    <content>
+      <text>Steve Robertson has been assigned to Saudi Arabia.  More to come soon...</text>
+    </content>
+  </entry>
+  <entry>
+    <date>May 28, 2006</date>
+    <content>
+      <text>The details of the 'Kalitta Air Update Project'that we are working on are finally up. Be sure to check it out on the 'Projects' page.</text>
+      <text>We also have a 737-200 for sale. Specs and info are on the 'Sims For Sale' page.</text>
+    </content>
+  </entry>
+  <entry>
+    <date>May, 22 2006</date>
+    <content>
+      <text>All the little bugs on the page have been worked out.</text>
+      <text>Soon to come: Detailed info on the Kalitta 747-200 project, Atlas Air 747-200 Update, Visual Spares for sale, etc...</text>
+      <text>Have Feedback for the site? E-mail to Evan Plaice on the 'Contact Us' Page.</text>
+    </content>
+  </entry>
+  <entry>
+    <date>March, 28 2006</date>
+    <content>
+      <text>The website has been recently updated to have a clean sleek look. The links section is now up and running and the 737-200 that we have for sale can be found on the 'Sims For Sale' page.</text>
+      <text>Today our contact info will be posted on the 'Contact Us' page and info on our recent projects will start to appear on the projects page.</text>
+    </content>
+  </entry>
+  <entry>
+    <date>March, 25 2006</date>
+    <content>
+      <text>This is the first real entry into the JPA Simulation website. Currently we are involved on an update to a B747-200 sim at Kalitta Air in Detroit, MI. As the website grows we will be able to share more information.</text>
+    </content>
+  </entry>
+</news>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE contacts [
+  <!ELEMENT facility 	  (name|phone?|phone2?|fax?|address1a?|address1b?)>
+  <!ELEMENT contact 	  (name|title|phone?|phone2?|fax?|email?|email2?|address1a?|address1b?|address2a?|address2b?)>
+  <!ELEMENT name		    (#PCDATA)>
+  <!ELEMENT title		    (#PCDATA)>
+  <!ELEMENT phone		    (#PCDATA)>
+  <!ELEMENT phone2		  (#PCDATA)>
+  <!ELEMENT fax			    (#PCDATA)>
+  <!ELEMENT email		    (#PCDATA)>
+  <!ELEMENT email2		  (#PCDATA)>
+  <!ELEMENT address1a	  (#PCDATA)>
+  <!ELEMENT address1b	  (#PCDATA)>
+  <!ELEMENT address2a	  (#PCDATA)>
+  <!ELEMENT address2b	  (#PCDATA)>
+]>
+
+<contacts>
+  <facility>
+    <name>Warehouse</name>
+    <address1a>10650 Irma Dr. Unit 6</address1a>
+    <address1b>Northglenn, CO 80233</address1b>
+  </facility>
+  <contact>
+    <name>Joel Plaice</name>
+    <title>President</title>
+    <phone>(720)841-3370</phone>
+    <email>JoelPlaice@JPASims.net</email>
+    <email2>JoelPlaice@aol.com</email2>
+  </contact>
+  <contact>
+    <name>Steve Plaice</name>
+    <title>Vice President, Business Development</title>
+    <phone>(864)804-7292</phone>
+    <phone2>(864)804-7292</phone2>
+    <email>StevePlaice@JPASims.net</email>
+  </contact>
+  <contact>
+    <name>Steve Robertson</name>
+    <title>Project Engineer</title>
+    <email>SteveRobertson@JPASims.net</email>
+  </contact>
+  <contact>
+    <name>Evan Plaice</name>
+    <title>Electrical Design Technician/Webmaster</title>
+    <email>EvanPlaice@JPASims.net</email>
+  </contact>
+</contacts>

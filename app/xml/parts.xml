@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE parts [
+  <!ELEMENT entry         (title|content|description)>
+  <!ELEMENT title		      (#PCDATA)>
+  <!ELEMENT description   (#PCDATA)>
+]>
+
+<parts>
+  <entry id="1">
+    <title>E&amp;S 3000 Image Generator</title>
+    <description>A 3 channel E&amp;S 3000 series Image Generator complete except for software and disc drive(s).</description>
+  </entry>
+  <entry id="2">
+    <title>Vital IV Single Channel</title>
+    <description>A complete single channel IG system and supporting parts less monitors. HDD contains operational software. Backups on 8" FD.</description>
+  </entry>
+  <entry id="3">
+    <title>Encore Gould Equipment</title>
+    <description>This is a consignment of Gould/Encore parts held as spares in a simulator shop recently.  They will all be run through a system after ordered to ensure proper operation before shipping.  More parts will be in shortly, so keep an eye on this section.</description>
+  </entry>
+  <entry id="4">
+    <title>Singer Link AST Parts</title>
+    <description>A huge lot of AST linkage PCB's</description>
+  </entry>
+</parts>

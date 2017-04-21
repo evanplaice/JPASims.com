@@ -1,0 +1,80 @@
+application: jpasims
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+builtins:
+#- appstats: off
+- remote_api: on
+
+#inbound_services:
+#- warmup
+
+#default_expiration: "5d"
+
+handlers:
+- url: /favicon.ico
+  static_files: static/images/favicon.ico
+  upload: static/images/favicon.ico
+
+- url: /robots.txt
+  static_files: static/docs/robots.txt
+  upload: static/docs/robots.txt
+
+- url: /sitemap.xml
+  static_files: static/docs/sitemap.xml
+  upload: static/docs/sitemap.xml
+
+- url: /(.*\.(gif|png|jpg))
+  static_files: static/images/\1
+  upload: static/images/(.*\.(gif|png|jpg))
+
+- url: /(.*\.js)
+  static_files: static/scripts/\1
+  upload: static/scripts/(.*\.js)
+
+- url: /(.*\.css)
+  static_files: static/stylesheets/\1
+  upload: static/stylesheets/(.*\.css)
+
+- url: /projects/(.*\.(gif|png|jpg))
+  static_files: static/images/projects\1
+  upload: static/images/projects/(.*\.(gif|png|jpg))
+
+- url: /sims/(.*\.(gif|png|jpg))
+  static_files: static/images/sims\1
+  upload: static/images/sims/(.*\.(gif|png|jpg))
+
+- url: /devices/(.*\.(gif|png|jpg))
+  static_files: static/images/devices\1
+  upload: static/images/devices/(.*\.(gif|png|jpg))
+
+- url: /(.*\.(pdf))
+  static_files: static/docs/\1
+  upload: static/docs/(.*\.(pdf))
+
+- url: /(.*\.(mp3|mp4|ogv|ogg|webm|swf))
+  static_files: static/media/\1
+  upload: static/media/(.*\.(mp3|mp4|ogv|ogg|webm|swf))
+
+- url: /(.*\.html)
+  static_files: static/html/\1
+  upload: static/html/(.*\.html)
+
+- url: /admin
+  script: app.main.application
+
+- url: /inventory/.*
+  script: api.main.application
+
+- url: /.*
+  script: app.main.application
+
+libraries:
+- name: jinja2
+  version: latest
+- name: yaml
+  version: latest
+- name: lxml
+  version: latest

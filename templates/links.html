@@ -1,0 +1,64 @@
+{% extends '_base.html' %}
+{% set bodytitle='Links Section' %}
+{% block page_style %}
+<style>
+.link_section_title {
+position:relative;
+width:auto;
+height:25px;
+overflow:hidden;
+padding-left:10px;
+clear:both;
+background:url("/hr.gif") no-repeat bottom;
+font-size:17px; font-weight:bold;
+}
+
+.link_object {
+position:relative;
+width:225px;
+height:95px;
+float:left;
+margin: 0px 24px 10px 24px;
+text-decoration:none;
+}
+
+.link_logo {
+position:absolute;
+width:225px;
+height:75px;
+}
+.link_caption {
+position:absolute;
+width:225px;
+height:20px;
+top:75px;
+text-align:center;
+font-weight:bold;
+}
+</style>
+{% endblock%}
+{% block page_content %}
+<div class="link_section_title">Partners</div>
+
+<a class="link_object" href="http://www.northernsimulation.com">
+  <img class="link_logo" src="/links_northernsimulation.gif" alt="Northern Simulation Logo" />
+  <span class="link_caption">Northern Simulation</span>
+</a>
+
+<a class="link_object" href="http://www.simprove.aero">
+  <img class="link_logo" src="/links_simprove.gif" alt="Simprove Logo"/>
+  <span class="link_caption">SimProve</span>
+</a>
+
+<a class="link_object" href="http://hollandcanadaline.com/00_aerospace/00_operator/frames/frameset_aeroclient.html">
+  <img class="link_logo" src="/links_hcl.gif" alt="Holland Canada Line Logo"/>
+  <span class="link_caption">Holland Canada Line</span>
+</a>
+
+<a class="link_object" href="http://www.macpackllc.com/">
+  <img class="link_logo" src="/links_macpack.gif" alt="MACPACK Logo"/>
+  <span class="link_caption">MACPACK</span>
+</a>
+
+<div class="link_section_title">External Links</div>
+{% endblock%}

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Typeface Testing - Joel Plaice and Associates Inc.</title>
+<meta name="description" content="" /><meta http-equiv= "content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="keywords" content="" />
+<meta name="author" content="Evan Plaice" />
+<meta charset="utf-8">
+<link rel="stylesheet" href="/base.css" />
+<link rel="stylesheet" href="/typeface.css" /><script src="/global.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style>
+</style>
+</head>
+
+<body onload="screen_res();<!--<?php echo $onload;?>-->">
+<!--Main Container-->
+<table align="center"><tr><td>
+<div class="container"> 
+
+<!--Title Bar and Nav Bar Background-->
+<div class="titlebar"></div>
+
+<!--NavBar-->
+<div class=navbar> 
+<a class=home href="/"></a>
+<a class=home_txt href="/">Home</a>
+
+<a class=about href="/about-us"></a> 
+<a class=about_txt href="/about-us">About Us</a>
+
+<a class=press href="/press-releases"></a> 
+<a class=press_txt href="/press-releases">Press Releases</a> 
+ 
+<a class=project href="/projects"></a> 
+<a class=project_txt href="/projects">Projects</a> 
+
+<a class=products href="/sim-products"></a> 
+<a class=products_txt href="/sim-products">Sim Products</a>
+
+<a class=sims href="/sims-for-sale"></a> 
+<a class=sims_txt href="/sims-for-sale">Sims For Sale</a> 
+
+<a class=parts href="/parts-for-sale"></a> 
+<a class=parts_txt href="/parts-for-sale">Parts For Sale</a> 
+
+<a class=devices href="/devices-for-sale"></a>
+<a class=devices_txt href="/devices-for-sale">Devices for Sale</a>
+
+<a class=training href="/training"></a>
+<a class=training_txt href="/training">Training</a>
+
+<a class=consulting href="/consulting"></a> 	
+<a class=consulting_txt href="/consulting">Consulting</a> 
+
+<a class=link href="/links"></a> 
+<a class=link_txt href="/links">Links</a> 
+
+<a class=contact href="/contact-us"></a> 	
+<a class=contact_txt href="/contact-us">Contact Us</a> 
+</div>
+
+<div class="body_background"></div>
+<div id="body"><div class="breadcrumb"><!--<?php include_once ($_SERVER['DOCUMENT_ROOT'].'/_script/breadcrumbs.php');?>--></div>
+
+<!-- page_content template -->
+<div class="h1">This is a H1 header</div>
+<br />
+<div class="h2">This is a H2 header</div>
+<br />
+<br />
+<div class="hr"></div>
+<br />
+<br />
+<div class="p1">This is a paragraph</div>
+<br />
+<br />
+<div class="hr"></div>
+<br />
+<br />
+<div class="p1">
+	<div class="cols">
+		<div class="col2" style="background-color:#cccccc;">This is a two</div>
+		<div class="col2" style="background-color:#ffffff;">column example...</div>
+	</div>
+</div>
+<br />
+<div class="p1">
+	<div class="cols">
+		<div class="col3" style="background-color:#cccccc;">This is a</div>
+		<div class="col3" style="background-color:#ffffff;">three column</div>
+		<div class="col3" style="background-color:#cccccc;">example...</div>
+	</div>
+</div>
+<br />
+<div class="p1">
+	<div class="cols">
+		<div class="col4" style="background-color:#cccccc;">This is a</div>
+		<div class="col4" style="background-color:#ffffff;">four</div>
+		<div class="col4" style="background-color:#cccccc;">column</div>
+		<div class="col4" style="background-color:#ffffff;">example...</div>
+	</div>
+</div>
+<br />
+<div class="p1">
+	<div class="cols">
+		<div class="col5" style="background-color:#cccccc;">This</div>
+		<div class="col5" style="background-color:#ffffff;">is a</div>
+		<div class="col5" style="background-color:#cccccc;">five</div>
+		<div class="col5" style="background-color:#ffffff;">column</div>
+		<div class="col5" style="background-color:#cccccc;">example...</div>
+	</div>
+</div>
+<br />
+<br />
+<div class="hr"></div>
+<br />
+<br />
+<div class="breadcrumb">This is a BreadCrumb</div>
+<br />
+<div class="announce">This is the format for an announcement</div>
+<br />
+<div class="detail">This is the format for a details link</div>
+<br />
+<br />
+<div class="hr"></div>
+<br />
+<br />
+<div class="h2">Page Typeface Formatting Breakdowns</div>
+<div class="p1">
+Include Files
+<ul>
+	<li>h1</li>
+	<li>breadcrumb</li>
+</ul>
+
+index.php
+<ul>
+	<li>h2</li>
+	<li>p1</li>
+	<li>announce</li>
+</ul>
+<br />
+
+about_us/index.php
+<ul>
+	<li>h2</li>
+	<li>p1</li>
+	<li>cols</li>
+	<li>col3</li>
+</ul>
+<br />
+
+projects/index.php
+<ul>
+	<li>prj</li>
+	<li>prj_title</li>
+	<li>prj_date</li>
+	<li>cols</li>
+	<li>col2</li>
+	<li>detail</li>
+</ul>
+<br />
+
+projects/atlas/index.php
+<ul>
+	<li>prj_desc_date</li>
+	<li>h2</li>
+	<li>p1</li>
+	<li>cols</li>
+	<li>col3</li>
+</ul>
+
+projects/kalitta_construction/index/php
+<ul>
+	<li>prj_desc_date</li>
+	<li>p1</li>
+</ul>
+<br />
+
+projects/kalitta_move/index.php
+<ul>
+	<li>prj_desc_date</li>
+</ul>
+<br />
+
+projects/kalitta_update/index.php
+<ul>
+	<li>prj_desc_date</li>
+	<li>p1</li>
+</ul>
+<br />
+
+sim_products/index.php
+<ul>
+	<li>prd</li>
+	<li>prdtitle</li>
+	<li>prdtext</li>
+	<li>p1</li>
+	<li>detail</li>
+</ul>
+<br />
+
+sim_products/tcas/index.php
+<ul>
+	<li>h2</li>
+	<li>p1</li>
+</ul>
+<br />
+
+sim_products/rios/index.php
+<ul>
+	<li>p1</li>
+</ul>
+<br />
+
+sims_for_sale/index.php
+<ul>
+	<li>sim</li>
+	<li>simtitle</li>
+	<li>simtext</li>
+	<li>detail</li>
+</ul>
+<br />
+
+links/index.php
+<ul>
+	<li>link_section_title</li>
+</ul>
+<br />
+
+press_releases/index.php
+<ul>
+	<li>press_top_text</li>
+	<li>press_content</li>
+	<li>p1</li>
+</ul>
+<br />
+
+consulting/index.php
+<ul>
+	<li>h2</li>
+	<li>p1</li>
+	<li>detail</li>
+</ul>
+<br />
+
+contact_us/index.php
+<ul>
+	<li>c_name</li>
+	<li>c_nfo</li>
+</ul>
+<br />
+</div>
+<!-- end template -->
+
+<!--Close Main Body-->
+</div>
+
+<!--Bottom Bar-->
+<div class="bottom_bar"> 
+	<a class="copyright" href="/copyright"></a>
+</div>
+
+<!--Close Main Container-->
+</div>
+</td></tr></table>
+
+<!--Google Analytics Tracker-->
+<script src="http://www.google-analytics.com/urchin.js"></script>
+<script>_uacct = "UA-3478592-1";urchinTracker();</script>
+
+</body>
+</html>

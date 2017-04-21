@@ -1,0 +1,259 @@
+{% extends '_base.html' %}
+{% set bodytitle='Flight Simulator Parts For Sale' %}
+{% block page_style %}
+<style>
+thead {
+color:#444444;
+font-weight:bold;
+}
+
+.part {
+position:relative;
+width:265px;
+height:315px;
+float:left;
+background-image:url("/hr_part.gif");
+background-repeat:no-repeat;
+}
+
+/*Simulator Part Pic*/
+.partpic {
+position:relative;
+width:150px;
+height:150px;
+display:block;
+margin:0 auto;
+background-repeat:no-repeat;
+background-position:center center;
+}
+
+/*Simulator Part Title*/
+.parttitle {
+position:relative;
+width:auto;
+height:25px;
+float:left;
+padding-left:15px;
+background: url("/hr.gif") no-repeat bottom;
+font-size:17px;
+font-weight:bold;
+}
+
+/*Simulator Part Description*/
+.parttext {
+position:relative;
+width:245px;
+height:75px;
+float:left;
+padding:10px;
+overflow:hidden;
+font-size:14px;
+text-align:justify;
+}
+</style>
+{% endblock %}
+{% block page_script %}
+<script src="/jquery.csv-0.6.min.js"></script>
+<script src="/jquery.json-2.3.min.js"></script>
+<script src="/jquery.validate.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#search').validate({
+      submitHandler: function(form) {
+        $('#offset').val(0);
+        var query = $('#search').serialize();
+        search(query, true);
+      }
+    });
+    
+    $("#submit").click();
+  });
+
+  function search(query, recount) {
+    var url = '/inventory/search?' + query;
+    $.ajax({
+      type: 'GET',
+      url: url,
+      success: function(json){
+        var data = $.evalJSON(json);
+        var html = '';
+        html += '<tr>\r\n';
+        html += '<th>Category</th>\r\n';
+        html += '<th>Type</th>\r\n';
+        html += '<th>Manufacturer</th>\r\n';
+        html += '<th>Description</th>\r\n';
+        html += '<th>Part No.</th>\r\n';
+        html += '<th>Serial No.</th>\r\n';
+        html += '</tr>\r\n';
+        for(var row in data) {
+          if(row % 2 == 0) {
+            html += '<tr style="background-color:lightgray;">\r\n';
+          } else {
+            html += '<tr style="background-color:white;">\r\n';
+          }
+          html += '<td>' + data[row]['category'] + '</td>\r\n';
+          html += '<td>' + data[row]['type'] + '</td>\r\n';
+          html += '<td>' + data[row]['manufacturer'] + '</td>\r\n';
+          html += '<td>' + data[row]['description'] + '</td>\r\n';
+          html += '<td>' + data[row]['part_number'] + '</td>\r\n';
+          html += '<td>' + data[row]['serial_number'] + '</td>\r\n';
+          html += '</tr>\r\n';
+        }
+        $('#results').html(html);
+        if(recount) {
+          count(query);
+        } else {
+          paginate();
+        }
+      },
+      error: function(jqXHR, exception){
+      if (jqXHR.status === 0) {
+        alert('Not connect.\n Verify Network.');
+      } else if (jqXHR.status == 404) {
+        alert('Requested page not found. [404]');
+      } else if (jqXHR.status == 500) {
+        alert('Internal Server Error [500].');
+      } else if (exception === 'timeout') {
+        alert('Time out error.');
+      } else if (exception === 'abort') {
+        alert('Ajax request aborted.');
+      } else {
+        alert('Uncaught Error.\n' + jqXHR.responseText);
+      }}
+    });
+  }
+
+  function count(query) {
+    var url = '/inventory/count?' + query;
+    $.ajax({
+      type: 'GET',
+      url: url,
+      success: function(count){
+        $('#count').val(count);
+        paginate();
+      },
+      error: function(jqXHR, exception){
+      if (jqXHR.status === 0) {
+        alert('Not connect.\n Verify Network.');
+      } else if (jqXHR.status == 404) {
+        alert('Requested page not found. [404]');
+      } else if (jqXHR.status == 500) {
+        alert('Internal Server Error [500].');
+      } else if (exception === 'timeout') {
+        alert('Time out error.');
+      } else if (exception === 'abort') {
+        alert('Ajax request aborted.');
+      } else {
+        alert('Uncaught Error.\n' + jqXHR.responseText);
+      }}
+    });
+  }
+
+  function paginate() {
+    var count = $('#count').val();
+    var limit = $('#limit').val();
+    var pages = Math.floor(count / limit);
+    var offset = $('#offset').val();
+    var page = (offset / limit) + 1;
+    if(page == 0){
+      page = 1;
+    }
+    var links = '';
+    for(var i=1; i<=(pages+1); i++) {
+      if(page == i) {
+        links += page + '\r\n'
+        continue;
+      }
+      links += '<a class="page" href="javascript:void(0)">' + i + '</a>\r\n';
+    }
+    $('#links').html(links);
+    $('.page').click(function() {
+      var page = $(this).text();
+      var limit = $('#limit').val();
+      var offset = (page - 1) * limit;
+      $('#offset').val(offset);
+      $('#page').val(page);
+      var query = $('#search').serialize();
+      search(query, false);
+    });
+  }
+</script>
+{% endblock%}
+{% block page_content %}
+<fieldset>
+<legend>Filters</legend>
+<form id=search name=search action="">
+<table style="text-align:center;" width="100%" border>
+<tr>
+<td>
+	Category:<br />
+	<select id="category" name="category">
+		<option value="">No Filter</option>
+		<option value="Host Computer">Host Computer</option>
+		<option value="Linkage">Linkage</option>
+		<option value="Motion">Motion</option>
+		<option value="Visual">Visual</option>
+	</select><br />
+</td>
+<td>
+	Part Type:<br />
+	<select id="type" name="type">
+		<option value="">No Filter</option>
+		<option value="Amplifier">Amplifier</option>
+		<option value="Backplane">Backplane</option>
+    <option value="Chassis">Chassis</option>
+		<option value="Disc Drive">Disc Drive</option>
+		<option value="Misc">Misc</option>
+		<option value="Module">Module</option>
+		<option value="PCB">PCB</option>
+		<option value="Power Supply">Power Supply</option>
+
+	</select><br />
+</td>
+<td>
+	Sort By:<br />
+	<select id="order" name="order">
+		<option value="">No Filter</option>
+		<option value="manufacturer">Manufacturer</option>
+		<option value="part_number">Part No.</option>
+		<option value="category">Category</option>
+		<option value="type">Type</option>
+	</select><br />
+</td>
+<td>
+	Asce: <input type=radio id="by" name="by" value="ASC" checked=yes /><br />
+	Desc: <input type=radio id="by" name="by" value="DESC" /><br />
+</td>
+<td>
+	Results<br />
+	<select name="limit" id="limit">
+		<option value="25">25</option>
+		<option value="50">50</option>
+		<option value="75">75</option>
+		<option value="100">100</option>
+	</select><br />
+</td>
+<td>
+	<input id="submit" name="submit" type=submit value="Update" />
+</td>
+</tr>
+<input id="offset" name="offset" type=hidden value="0">
+</table>
+</form>
+</fieldset>
+
+<fieldset>
+<legend>Results</legend>
+<table id=results style="width:100%;font-size:small;" border>
+</table>
+</fieldset>
+
+<fieldset>
+<legend>Pages</legend>
+<div id="links">
+</div>
+</fieldset>
+
+<input id="count" name="count" type=hidden value="0">
+<input id="page" name="page" type=hidden value="0">
+{% endblock %}

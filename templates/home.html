@@ -1,0 +1,35 @@
+{% extends '_base.html' %}
+{% set bodytitle='Welcome to Joel Plaice and Associates Inc.' %}
+{% block page_style %}
+<style>
+#body {
+min-height:600px;
+}
+
+.h2 {
+width:120px;
+}
+
+ul, ol {
+margin-top:0;
+}
+
+.listtitle:after {
+content: ":";
+}
+
+.text {
+margin-bottom:10px;
+}
+</style>
+{% endblock%}
+{% block page_content %}
+<div class="announce">
+  Flight Simulator Professionals with Websites.
+  <br />
+  Want a link on our page? E-Mail Evan Plaice on the <a href="/contact-us">Contact</a> page.
+</div>
+<!-- xml view -->
+{{ view|safe -}}
+<!-- end view -->
+{% endblock%}

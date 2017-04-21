@@ -1,0 +1,139 @@
+ /*
+typeface.css 2.0
+Created By Evan Plaice
+Valid CSS as of - Monday, December 17, 2007
+http://jigsaw.w3.org/css-validator/
+*/
+
+/* Re-Defined HTML Tags
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*Website Defaults*/
+body {
+font-family:"Palatino Linotype", "Times New Roman", Courier, sans-serif;
+font-size:12pt;
+border:none;
+}
+
+/*Null the anchor style <img> Borders*/
+img {
+border:none;
+}
+
+/* Cursor Defaults
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*Cursor State for Rollover Links*/
+a:hover, .linklogo {
+cursor:pointer;
+}
+
+/* Coloring Schemes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*Default Header & Title Text Color*/
+.h2, .breadcrumb, .c_name, .announce, .press_content, .prj_title, .link_section_title, .prj_desc_date, .parttitle , .prdtitle {
+color:#006666;
+}
+
+/*Default Body Content Text Color*/
+.p1, .cols, .simtext, .parttext, .press_top, .contact_form, .c_nfo {
+color: #003333;
+}
+
+/* Headers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*Page Header*/
+.h1 {
+margin-bottom:5px;
+font-size:100%;
+font-weight:bolder;
+color:#666666;
+border-bottom-style:groove;
+}
+
+/*Generic Paragraph Header*/
+.h2 {
+width:200px;
+overflow:hidden;
+margin:0px 0px 3px 15px;
+clear:left;
+background:url("/hr.gif") no-repeat bottom;
+font-weight:bold;
+font-size:82%;
+}
+
+/* Paragraphs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*Generic Paragraph Format*/
+.p1 {
+padding-left:12px;
+padding-right:12px;
+font-size:80%;
+text-align:justify;
+margin-bottom:15px;
+}
+
+/* Columns
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*Columns Container*/
+.cols {
+position:relative;
+width:100%;
+height:auto;
+display:block;
+}
+
+/*Column Designators*/
+.col2, .col3, .col4, .col5 {
+position:relative;
+width:50%;
+float:left;
+display:block;
+}
+
+/*Column Formatting*/
+.col2 li, .col3 li, .col4 li, .col5 li {
+list-style-type:none;
+}
+
+/*Individual Column Widths*/
+.col2 {
+width:50%;
+}
+.col3 {
+width:33%;
+}
+.col4 {
+width:25%;
+}
+.col5 {
+width:20%;
+}
+
+/* Misc
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*Breadcrumb Link Format*/
+.breadcrumb {
+margin-bottom:10px;
+font-size:75%;
+font-weight:bold;
+text-align:center;
+font-style:italic;
+}
+
+/*Project Title Format*/
+.announce {
+margin-bottom:5px;
+font-weight:bold;
+font-size: 80%;
+text-align:center;
+}
+
+/*Details Links*/
+.detail {
+position:relative;
+width:100%;
+height:25px;
+float:left;
+margin-bottom:10px;
+font-size:9pt;
+text-align:center;
+}

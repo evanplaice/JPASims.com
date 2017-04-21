@@ -1,0 +1,131 @@
+{% extends '_base.html' %}
+{% set bodytitle='Contact Information' %}
+{% block page_style %}
+<style>
+.hide {
+display:none;
+}
+
+.contact_form {
+position:relative;
+width:70%;
+height:auto;
+display:block;
+float:left;
+font-size:80%;
+}
+
+.contact_nfo {
+position:relative;
+width:30%;
+height:auto;
+display:block;
+float:left;
+}
+
+.c_name {
+font-size:85%;
+text-align:center;
+}
+
+.c_nfo {
+margin-bottom:25px;
+font-size:80%;
+text-align:center;
+}
+</style>
+{% endblock %}
+{% block page_script %}
+<script src="/jquery.validate.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('#contact').validate({
+      rules: {
+        name: {
+          required:true
+        },
+        email: {
+          required:true,
+          email:true
+        },
+        message: {
+          required: true
+        }
+      },
+      //messages: {
+      //  name:'Please enter your name',
+      //  email:'Please enter an email',
+      //  message:'Please enter a message'
+      //},
+      submitHandler: function(form) {
+        var message = $('#contact').serialize();
+        sendMessage(message);
+      }
+    });
+  });
+
+  function sendMessage(queryString) {
+    var url = '/email?' + queryString;
+    $.ajax({
+      type: 'POST',
+      url: url,
+      success: function(response){
+        alert(response);
+      },
+      error: function(jqXHR, exception){
+      if (jqXHR.status === 0) {
+        alert('Not connect.\n Verify Network.');
+      } else if (jqXHR.status == 404) {
+        alert('Requested page not found. [404]');
+      } else if (jqXHR.status == 500) {
+        alert('Internal Server Error [500].');
+      } else if (exception === 'timeout') {
+        alert('Time out error.');
+      } else if (exception === 'abort') {
+        alert('Ajax request aborted.');
+      } else {
+        alert('Uncaught Error.\n' + jqXHR.responseText);
+      }}
+    });
+  }
+</script>
+{% endblock %}
+{% block page_content %}
+<table width="100%">
+<tr>
+<td style="width:60%" align="center">
+<form id="contact" name="contact" action="">
+  <fieldset>
+  <legend>E-Mail Form</legend>
+    <table class=p1>
+    <tr>
+    <td>Name:</td>
+    <td><input name="name" id="name" type=text value=""></td>
+    </tr>
+    <tr>
+    <td>E-Mail:</td>
+    <td><input name="email" id="email" type=text value=""></td>
+    </tr>
+    <tr>
+    <td>Subject:</td>
+    <td><input name="subject" id="subject" type=text size="41" value=""></td>
+    </tr>
+    <tr>
+    <td colspan="2"><textarea name="contents" id="contents" rows="15" cols="42"></textarea></td>
+    </tr>
+    </table>
+    {{ captcha|safe }}
+  <input id="submit" name="submit" type=submit style="visibility:hidden">
+  <div style="font-style:italic">Press enter to submit</div>
+  </fieldset>
+</form>
+</td>
+<td style="40%">
+<!-- xml view -->
+{{ view|safe -}}
+<!-- end view -->
+</td>
+</tr>
+</table>
+<br />
+{% endblock %}

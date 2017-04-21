@@ -1,0 +1,174 @@
+{% extends '_base.html' %}
+{% set bodytitle='Past and Present Simulator Projects' %}
+{% block page_style %}
+<style>
+.prj {
+position:relative;
+width:100%;
+height:auto;
+display:block;
+float:left;
+}
+
+/*Project Title Format*/
+.prj_title {
+position:relative;
+width:450px;
+height:25px;
+display:block;
+clear:left;
+margin-left:10px;
+background:url("/hr.gif") no-repeat bottom;
+font-size:17px;
+}
+
+/*Project Date Header Format*/
+.prj_date {
+position:relative;
+width:400px;
+height:25px;
+margin:0px 0px 5px 55px;
+font-size:13px;
+color:#006666;
+}
+
+/*Project Picture Format*/
+.prj_pic {
+position:absolute;
+width:125px;
+height:100px;
+right:0px;
+display:block;
+background-repeat:no-repeat;
+background-position:center center;
+}
+
+/*Project Specific 2 Column Text Block Format*/
+.prj .col2s {
+position:relative;
+width:86%;
+height:auto;
+display:block;
+}
+
+/*Individual Column Designator*/
+.prj .col2 {
+position:relative;
+width:43%;
+height:auto;
+display:block;
+float:left;
+font-size:80%;
+text-align:left;
+}
+
+/*Individual Column Formatting*/
+.prj .col2 li {
+margin-bottom:3px;
+list-style-type:disc;
+}
+
+/*TimeFrame Header for 'Details' Pages*/
+.prj_desc_date {
+margin:0px 0px 15px 60px;
+font-size:100%;
+}
+</style>
+{% endblock %}
+{% block page_content %}
+	<!--Kalitta Air Update - Spring '06-->
+<div class="prj"> 
+  <a href="http://www.kalittaair.com/index.htm">
+    <img class="prj_pic" src="/placeholder.gif" style="background-image:url('/projects_kalitta.gif');" alt="Kalitta Logo" /></a>
+  <div class="prj_title">Kalitta Air B747-200 Simulator Update</div>
+  <div class="prj_date">Timeframe: Fall 2005 - June 2006</div>
+  <div class="cols">
+    <div class="col2">
+      <ul>
+        <li>EGPWS Installation</li>
+        <li>FAA Certification</li>
+        <li>Glass Engine Instruments Display Integration</li>
+        <li>747-200 / 300 Switchable</li>
+        <li>Control Loading Update</li>
+        <li>IOS Flat Panel Display Upgrade</li>
+        <li>Visual Modeling Updates</li>
+      </ul>
+    </div>
+    <div class="col2">
+      <ul>
+        <li>Autopilot Update</li>
+        <li>Pratt &amp; Witney Engines</li>
+        <li>Pratt &amp; GE Switchable</li>
+        <li>QTG Development</li>
+        <li>GSD Compiler Development</li>
+        <li>Full Passenget to Cargo Conversion</li>
+        <li>Attributed Documentation Update</li>
+      </ul>
+    </div>
+  </div>
+  <div id="kalitta_update" class="detail"><a href="/kalitta-update">Click here for details...</a></div>
+</div>
+
+<!--Atlas Air Project - Spring '06-->
+<div class="prj">
+  <a href="http://www.atlasair.com">
+    <img class="prj_pic" src="/placeholder.gif" style="background-image:url('/projects_atlas.gif');" alt="Atlas Air Logo" /></a>
+  <div class="prj_title">Atlas Air B747-200 Avionics Update</div>
+  <div class="prj_date">Timeframe: Spring 2005 - Current</div>
+  <div class="cols">
+    <div class="col2">
+      <ul>
+        <li>Litton - 92 Installation</li>
+        <li>TAWS Installation</li>
+      </ul>
+    </div>
+    <div class="col2">
+      <ul>
+        <li>TCAS Software Update</li>
+        <li>TCAS Rehosting</li>
+      </ul>
+    </div>
+  </div>
+  <div id="atlas_project" class="detail"><a href="/atlas-air-update">Click here for details...</a></div>
+</div>
+
+<!--Kalitta Air Simulator Move - Winter 05 - Spring 06-->
+<div class="prj">
+  <a href="http://www.kalittaair.com/index.htm">
+    <img class="prj_pic" src="/placeholder.gif" style="background-image:url('/projects_kalitta.gif');" alt="Kalitta Logo" /></a>
+  <div class="prj_title">Kalitta Air B747-200 Simulator Installation</div>
+  <div class="prj_date">Timeframe: Winter 2005 - Spring 2006</div>
+  <div class="cols">
+    <div class="col2">
+    </div>
+    <div class="col2">
+    </div>
+  </div>
+  <div id="kalitta_move" class="detail"><a href="/kalitta-move">Click here for details...</a></div>
+</div>
+
+<!--Kalitta Air Construction - Fall '05 - Winter 05-->
+<div class="prj">
+  <a href="http://www.kalittaair.com/index.htm">
+    <img class="prj_pic" src="/placeholder.gif" style="background-image:url('/projects_kalitta.gif');" alt="Kalitta Logo" /></a>
+  <div class="prj_title">Kalitta Air B747-200 Simulator Facility Construction</div>
+  <div class="prj_date">Timeframe: Fall 2005 - Winter 2005</div>
+  <div class="cols">
+    <div class="col2">
+      <ul>
+        <li>Architectural Planning</li>
+        <li>Building QC</li>
+        <li>Installation Assistance</li>
+      </ul>
+    </div>
+    <div class="col2">
+      <ul>
+        <li>Building Oversight</li>
+        <li>Simulator Integration</li>
+        <li>Commissioning</li>
+      </ul>
+    </div>
+  </div>
+  <div id="kalitta_construction" class="detail"><a href="/kalitta-construction">Click here for details...</a></div>
+</div>
+{% endblock %}

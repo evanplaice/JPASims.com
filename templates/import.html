@@ -1,0 +1,161 @@
+{% extends '_bare.html' %}
+{% block page_script %}
+<script src="/jquery.csv-0.6.min.js"></script>
+<script src="/jquery.json-2.3.min.js"></script>
+<script>
+  $(document).ready(function() {
+    if(isAPIAvailable()) {
+      $('#files').bind('change', handleFileSelect);
+      $('#truncate').bind('click', handleTruncate);
+    }
+  });
+
+  function isAPIAvailable() {
+    // Check for the various File API support.
+    if (window.File && window.FileReader && window.FileList && window.Blob) {
+      // Great success! All the File APIs are supported.
+      return true;
+    } else {
+      // source: File API availability - http://caniuse.com/#feat=fileapi
+      // source: <output> availability - http://html5doctor.com/the-output-element/
+      document.writeln('The HTML5 APIs used in this form are only available in the following browsers:<br />');
+      // 6.0 File API & 13.0 <output>
+      document.writeln(' - Google Chrome: 13.0 or later<br />');
+      // 3.6 File API & 6.0 <output>
+      document.writeln(' - Mozilla Firefox: 6.0 or later<br />');
+      // 10.0 File API & 10.0 <output>
+      document.writeln(' - Internet Explorer: Not supported (partial support expected in 10.0)<br />');
+      // ? File API & 5.1 <output>
+      document.writeln(' - Safari: Not supported<br />');
+      // ? File API & 9.2 <output>
+      document.writeln(' - Opera: Not supported');
+      return false;
+    }
+  }
+
+  function handleFileSelect(evt) {
+    var files = evt.target.files; // FileList object
+    var file = files[0];
+
+    // read the file metadata
+    var output = ''
+        output += '<span style="font-weight:bold;">' + escape(file.name) + '</span><br />\n';
+        output += ' - FileType: ' + (file.type || 'n/a') + '<br />\n';
+        output += ' - FileSize: ' + file.size + ' bytes<br />\n';
+        output += ' - LastModified: ' + (file.lastModifiedDate ? file.lastModifiedDate.toLocaleDateString() : 'n/a') + '<br />\n';
+
+    // read the file contents
+    printAsText(file);
+    postAsJSON(file);
+
+    // post the results
+    $('#list').append(output);
+  }
+
+  function printAsText(file) {
+    var reader = new FileReader();
+    reader.readAsText(file);
+    reader.onload = function(event){
+      var csv = event.target.result;
+      var data = $.csv2Array(csv);
+      var html = '';
+      for(var row in data) {
+        html += '<tr>\r\n';
+        for(var item in data[row]) {
+          html += '<td>' + data[row][item] + '</td>\r\n';
+        }
+        html += '</tr>\r\n';
+      }
+      $('#contents').html(html);
+    };
+    reader.onerror = function(){ alert('Unable to read ' + file.fileName); };
+  }
+
+  function postAsJSON(file) {
+    var reader = new FileReader();
+    reader.readAsText(file);
+    reader.onload = function(event){
+      csv = event.target.result;
+      data = $.csv2Array(csv, { skip:1 });
+      json = $.toJSON(data);
+      $.ajax({
+        type: 'POST',
+        url: '/inventory/import',
+        dataType: 'text',
+        contentType: 'application/json; charset=utf-8',
+        data: json,
+        success: function(response){
+          alert(response);
+        },
+        error: function(jqXHR, exception){
+          if (jqXHR.status === 0) {
+            alert('Not connect.\n Verify Network.');
+          } else if (jqXHR.status == 404) {
+            alert('Requested page not found. [404]');
+          } else if (jqXHR.status == 500) {
+            alert('Internal Server Error [500].');
+          } else if (exception === 'parsererror') {
+            alert('Requested JSON parse failed.');
+          } else if (exception === 'timeout') {
+            alert('Time out error.');
+          } else if (exception === 'abort') {
+            alert('Ajax request aborted.');
+          } else {
+            alert('Uncaught Error.\n' + jqXHR.responseText);
+          }
+        }
+      });
+    };
+    reader.onerror = function(){ alert('Unable to read ' + file.fileName); };
+  }
+  
+  function handleTruncate() {
+    $.ajax({
+      type: 'DELETE',
+      url: '/inventory/truncate',
+      success: function(response){
+        alert(response);
+      },
+      error: function(jqXHR, exception){
+        if (jqXHR.status === 0) {
+          alert('Not connect.\n Verify Network.');
+        } else if (jqXHR.status == 404) {
+          alert('Requested page not found. [404]');
+        } else if (jqXHR.status == 500) {
+          alert('Internal Server Error [500].');
+        } else if (exception === 'parsererror') {
+          alert('Requested JSON parse failed.');
+        } else if (exception === 'timeout') {
+          alert('Time out error.');
+        } else if (exception === 'abort') {
+          alert('Ajax request aborted.');
+        } else {
+          alert('Uncaught Error.\n' + jqXHR.responseText);
+        }
+      }
+    });
+  }
+</script>
+{% endblock%}
+{% block page_style %}
+<style>
+#inputs input {
+float:left;
+}
+#truncate {
+margin-left:400px;
+}
+</style>
+{% endblock %}
+{% block page_content %}
+<div id=inputs class=clearfix>
+  <input type=file id=files name=files[] multiple />
+  <input type=button id=truncate name=truncate value="Truncate" />
+</div>
+<hr />
+<output id=list>
+</output>
+<hr />
+<table id=contents style="width:100%; height:400px;" border>
+</table>
+{% endblock%}

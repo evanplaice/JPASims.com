@@ -1,0 +1,20 @@
+
+body {
+background-image:url("/page_slice.gif");
+}
+
+/*Webpage Frame - Dimensions & Centered*/
+.container {
+position:relative;
+width:996px;
+height:auto;
+margin:0 auto;
+}
+
+.clearfix:after {
+content:"";
+display:block;
+height:0;
+clear:both;
+visibility:hidden;
+}

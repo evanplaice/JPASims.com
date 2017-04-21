@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sims [
+  <!ELEMENT sim           (identifier|dir|gallery|images|description|spec|sold)>
+  <!ELEMENT identifier	  (#PCDATA)>
+  <!ELEMENT dir			      (#PCDATA)>
+  <!ELEMENT gallery		    (#PCDATA)>
+  <!ELEMENT images		    (#PCDATA)>
+  <!ELEMENT description	  (#PCDATA)>
+  <!ELEMENT spec		      (#PCDATA)>
+  <!ELEMENT sold		      (#PCDATA)>
+
+  <!ATTLIST sim number CDATA #REQUIRED>
+]>
+
+<sims>
+  <sim number="009">
+    <identifier>Rediffusion 737-200</identifier>
+    <dir>/sims_for_sale/westjet_737-200/</dir>
+    <gallery>no</gallery>
+    <images>0</images>
+    <description>This 737-200 simulator is a Rediffusion built Level C device certified under both Transport Canada and FAA after a considerable update in 2000. It is certified under AC 120-40B and passed its last recurrent evaluation in December 2005. It comes with a complete simulator and spares package. Options to install and commission are open for discussion. It is currently packed for sea shipment. Highlights include Worldwide Radio Aids Compiler system, Digital Controls, EGPWS, and updated computer peripherals.</description>
+    <spec>westjet_737-200_spec.pdf</spec>
+    <sold>no</sold>
+  </sim>
+  <sim number="011">
+    <identifier>CAE 737-300 (EFIS)</identifier>
+    <dir>/sims_for_sale/klm_737-300efis/</dir>
+    <gallery>yes</gallery>
+    <images>27</images>
+    <description>This 737-300 (EFIS) Full Flight Simulator is currently operating and certified at JAR-STD 1A Level CG.   It features a 750 CAE motion system and IMAGE II 6 window, 4 channel visual system. The simulator operates with a CAE DACBUS linkage, with the exception of the DN1 cabinet which is Super C DMC based for the digital control loading and motion system.  The engine system simulated is the GE CFM-3B1.  Original delivery and in-service date was 1987. The simulator equipment includes an impressive compliment of Simulator andVisual Spares. The simulator has a dual Host and IOS Computer complex, adding a high degree of reliability to these subsystems.  The simulator is owned and operated by KLM at the KLM Training Facility at Schipol Airport, Amsterdam, Netherlands. Select below to view a detailed Specification Sheet and Photo Gallery of the device.</description>
+    <spec>klm_737-300efis_spec.pdf</spec>
+    <sold>no</sold>
+  </sim>
+  <!--<sim number="012">
+    <identifier>Boeing 767-300ER</identifier>
+    <dir>/sims_for_sale/gulf_air_767-300er/</dir>
+    <gallery>yes</gallery>
+    <images>26</images>
+    <description>Fill in the flight simulator description and add a pic</description>
+    <spec>gulf_air_767-300er_spec.pdf</spec>
+    <sold>no</sold>
+  </sim>-->
+  <sim number="013">
+    <identifier>CAE MD-11</identifier>
+    <dir>/sims_for_sale/garuda_md11/</dir>
+    <gallery>yes</gallery>
+    <images>9</images>
+    <description>This MD-11 simulator has not been in service for over a decade.  The simulator was delivered, certified, then barely used before being shutdown as the owner's did not continue building an MD-11 fleet.  The device has been brought up to full operation recently.  It is currently missing most of the MaxVue visual system, 400Hz convertor, and some parts of the IOS.  The device has virtually no wear and tear on it.  The display system is a 180 WIDE mirror system.  It is currently installed in Jakarta, Indonesia.</description>
+    <spec>garuda_md11_spec.pdf</spec>
+    <sold>no</sold>
+  </sim>
+  <!--<sim number="14">
+    <identifier></identifier>
+    <dir>/sims_for_sale/klm_a310-200/</dir>
+    <gallery>no</gallery>
+    <images>0</images>
+    <spec>klm_a310-200_spec.pdf</spec>
+    <description>Fill in the flight simulator description and add a pic</description>
+    <sold>no</sold>
+  </sim>
+  -->
+  <sim number="010">
+    <identifier>CAE B767-300ER</identifier>
+    <dir>/sims_for_sale/klm_767-300er/</dir>
+    <gallery>yes</gallery>
+    <images>55</images>
+    <description>This 767-300ER Full Flight Simulator is currently operating and certified at JAR-STD 1A Level D.  It features an 800 CAE motion system and CAE MaxVue Enhanced B 180 degree visual system.  The simulator recently received an update to its rehosted FMC and EICAS systems.  Both 767-300 engine systems are simulated (CF6-80C2 B6F and PW4060).  Original delivery and in-service date was 1995.  The simulator equipment includes a compliment of Visual Spares.   The simulator is owned and operated by KLM at the KLM Training Facility at Schipol Airport, Amsterdam, Netherlands.  Select below to view a detailed Specification Sheet and Photo Gallery of the device.</description>
+    <spec>klm_767-300er_spec.pdf</spec>
+    <sold>yes</sold>
+  </sim>
+</sims>

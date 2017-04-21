@@ -1,0 +1,23 @@
+{% extends '_base.html' %}
+{% set bodytitle='Kalitta Air B747-200 Simulator Installation &amp; Commissoning' %}
+{% block plugin_js %}<script src="/fadomatic.js"></script>{% endblock %}
+{% block page_content %}
+<div class="prj_desc_date">Timeframe: Winter 2005 - Spring 2006</div>
+<div class="hr"></div>
+<br />
+<div class="thumbs">
+{%- set image='/projects/kalitta_move_' -%}
+{%- set thumb='/projects/kalitta_move_t' -%}
+{% for count in range(1,10) %}
+  <a href="{{image}}{{count}}.jpg" target="_blank" onclick="thumb_click('t{{count}}');return false;">
+    <img src="{{thumb}}{{count}}.jpg" />
+  </a>
+  <div class="pic_over" id="t{{count}}" onclick="thumb_close('t{{count}}')">
+    <img src="{{image}}{{count}}.jpg" />
+  </div>
+{% endfor %}
+</div>
+<br />
+  <div class="hr"></div>
+<br />
+{% endblock %}

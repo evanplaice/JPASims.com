@@ -1,0 +1,40 @@
+{% extends '_base.html' %}
+{% set bodytitle='Kalitta Air B747-200 Simulator Update' %}
+{% block plugin_js %}<script src="/fadomatic.js"></script>{% endblock %}
+{% block page_content %}
+<div class="prj_desc_date">Timeframe: Fall 2005 - Current 
+  <div style="font-weight: bold;text-decoration:blink;">Certified as of June 14, 2006</div>
+</div>
+<div class="hr"></div>
+<br />
+<div class="thumbs">
+{%- set image='/projects/kalitta_update_' -%}
+{%- set thumb='/projects/kalitta_update_t' -%}
+{% for count in range(1,12) %}
+  <a href="{{image}}{{count}}.jpg" target="_blank" onclick="thumb_click('t{{count}}');return false;">
+    <img src="{{thumb}}{{count}}.jpg" />
+  </a>
+  <div class="pic_over" id="t{{count}}" onclick="thumb_close('t{{count}}')">
+    <img src="{{image}}{{count}}.jpg" />
+  </div>
+{% endfor %}
+</div>
+<br />
+  <div class="hr"></div>
+<br />
+<div class="p1">The Kalitta B747-200/300 simulator was originally owned and operated by KLM in Amsterdam as a B747-300 simulator. To provide for the best training tool for Kalitta Air, numerous modifications to the cockpit and simulation had to occur:</div>
+<div class="p1">The simulator had the 747-200 package added to it yet the -300 package was retained. The device can be switched between the two by a simple selection on the IOS and is instantaneous. The QTG system contains tests for both B747 derivatives.</div>
+<div class="p1">Kalitta Air B747 aircraft utilize Pratt engines, whilst the KLM simulator utilized GE engines. Not wanting to lose the GE engines, the Pratt engine simulation was added to the package. The device can be switched, as with the 200/300 versions, between the two engines by a simple selection on the IOS and is also instantaneous. The QTG system contains tests for both engine types. The engine instrument display system is programmed to change from Pratt engine data display to GE data display.</div>
+<div class="p1">The simulator had not previously attained FAA certification. A new QTG had to be developed and installed to satisfy the latest FAA requirements - AC 120-40B. The QTG was developed so that results are immediately available on the IOS and are printed out by laser printer from the IOS screen printing facility.</div>
+<div class="p1">The Control Loading system operated by KLM was the original CAE "N1" analog system. The three primary control channels were changed to digital control loading per a system supplied by SCT Controls. The toe brake loaders and channels were changed to electric loaders and digital servo drives. New data was pulled from Kalitta aircraft for controls dynamic testing and integrated into the QTG system.</div>
+<div class="p1">The Kalitta aircraft are beginning a major modification to replace all engine instrumentation with a flat screen display system for both primary pilot displays (p2 forward panel) and Flight Engineer display. The system, provided by ISS, has been installed and integrated into the simulator prior to the first shipset being installed in the aircraft.</div>
+<div class="p1">Along with the Pratt engines being installed as the primary engine type, numerous modifications had to be conducted to change Fuel Systems, Fire detection and suppression systems, and other misc. aircraft systems.</div>
+<div class="p1">The Ground Station Data System was only partially representative of the worldwide database and was out of date. The labor intensive GSD update methodology made it impractical to update the entire world database and keep it in conformance in the future. A PC-based GSD compiling system was installed that can utilize the DAFIP worldwide database into the simulator whilst updating all pertinent software, including IOS pages, all in a few minutes of compilation time.</div>
+<div class="p1">The IOS CRT's were somewhat deficient in their operation and it was decided to replace them with a new technology, flat screen touchscreen system. The presentation is now clearer and easier to utilize. Much of the IOS page content and command scheme was modified to suit standard measurements, Kalitta Air's preferences, and new FAA requirements.</div>
+<div class="p1">The Pilot's front panels were already heavily modified and did not reflect the Kalitta Air aircraft configuration. New panels were manufactured and instrumentation and annunciators installed to match the Kalitta aircraft. This included several new or different instruments.</div>
+<div class="p1">The Flight Engineer's panels reflected a passenger aircraft configuration with GE engine setup. The FE station was heavily modified to represent the Kalitta Air Freighter configuration.</div>
+<div class="p1">The "Hammerhead" aircraft onboard computer was installed as per aircraft. An Electronic Flight Bag was installed as well.</div>
+<div class="p1">The visual system had to have three new databases provided with the latest AC 120-40B requirements including the FAA Visual Bulletin requirements. The needed to be modified to provide for training involving cargo centers at the three primary airports instead of traditional passenger gate positions.</div>
+<div class="p1">The original Mark II GPWS system was inadequate for Kalitta training, so an EGPWS system was installed.  Additional modifications to the simultor include changeover of the autopilot system, Navigation and instrument source selection and switching system, and several other minor modifications.</div>
+<div class="p1">The simulator was qualified by the FAA NSP team on June 14, 2007</div>
+{% endblock %}

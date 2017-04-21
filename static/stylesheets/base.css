@@ -1,0 +1,313 @@
+/*
+Description:
+This document consists of mostly the css layout structure of the pages.
+
+Other Linked CSS Files:
+css1.css		Contains inherited modifications to adapt to the 1024X768 version
+typeface.css	Contains all the typeface formatting
+*/
+
+/* Overall Layout
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*Lowest Layer Background*/
+body {
+background-image:url("/page_slice.gif");
+}
+
+/*Content Containers Layering*/
+.container, .titlebar, .body_background {
+z-index:0;
+}
+
+/*Webpage Frame - Dimensions & Centered*/
+.container {
+position:relative;
+width:996px;
+height:auto;
+margin:0 auto;
+}
+
+/*TitlebarSidebar - Background & Position & Dimensions*/
+.titlebar {
+position:absolute;
+width:100%;
+height:746px;
+top:15px;
+background:url("page.gif") no-repeat top;}
+}
+
+.clearfix:after {
+content:"";
+display:block;
+height:0;
+clear:both;
+visibility:hidden;
+}
+
+/*Body Frame - Position & Dimensions*/
+#body {
+position:relative;
+width:820px;
+height:auto;
+top:165px;
+left:170px;
+display:block;
+min-height:600px;
+}
+
+/*Body Background - Background & Dimensions*/
+.body_background {
+position:absolute;
+width:820px;
+height:592px;
+top:170px;
+left:170px;
+background:url("/background.gif") no-repeat;
+}
+
+/*Bottom Bar - Background & Position & Demensions*/
+.bottom_bar {
+position:relative;
+width:996px;
+height:53px;
+top:165px;
+display:block;
+float:left;
+clear:both;
+background:url("/page.gif") no-repeat;
+background-position:0px -746px;
+}
+
+/* Left-Side Navigation Bar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*'NavBar Links' Frame Container*/
+.navbar {position:absolute;
+z-index:1;
+width:126px;
+height:504px;
+top:207px;
+left:10px;
+}
+
+/*'NavBar Links' Phantom Links for Browser Crawlers*/ 
+.home_txt, .about_txt, .press_txt, .project_txt, .products_txt, .sims_txt, .parts_txt, .devices_txt, .training_txt, .consulting_txt, .link_txt, .contact_txt {
+position:absolute;
+z-index:0;
+width:126px;
+height:42px;
+text-align:center;
+vertical-align:middle;
+}
+
+/*NavButton Dimensions*/
+.home, .about, .press, .project, .products, .sims, .parts, .devices, .training, .consulting, .link , .contact {
+position:absolute;
+z-index:3;
+width:126px;
+height:42px;
+display:inline;
+}
+
+/*NavButton Background*/
+.home, .about, .press, .project, .products, .sims, .parts, .devices, .training, .consulting, .link , .contact {
+background-image:url("/navbar.gif");
+background-repeat:no-repeat;
+}
+
+/*NavButtonVertical Positioning*/
+.home,			.home_txt 			{top:0px;}
+.about,			.about_txt 			{top:42px;}
+.press,			.press_txt 			{top:84px;}
+.project,		.project_txt 		{top:126px;}
+.products,		.products_txt		{top:168px;}
+.sims,			.sims_txt 			{top:210px;}
+.parts,			.parts_txt			{top:252px;}
+.devices,		.devices_txt		{top:294px;}
+.training,		.training_txt		{top:336px;}
+.consulting,	.consulting_txt 		{top:378px;}
+.link,			.link_txt	 		{top:420px;}
+.contact,		.contact_txt 		{top:462px;}
+
+/*~~~~~~~~~~~~~~Home~~~~~~~~~~~~~~*/
+.home 				{background-position: -10px 0px;}
+a.home:hover 		{background-position: -146px 0px;}
+/*~~~~~~~~~~~~~~About~~~~~~~~~~~~~~*/
+.about 				{background-position: -10px -42px;}
+a.about:hover 		{background-position: -146px -42px;}
+/*~~~~~~~~~~~~~~PressRelease~~~~~~~~~~~~~~*/
+.press 				{background-position: -10px -84px;}
+a.press:hover 		{background-position: -146px -84px;}
+/*~~~~~~~~~~~~~~Project~~~~~~~~~~~~~~*/
+.project 			{background-position: -10px -126px;}
+a.project:hover 		{background-position: -146px -126px;}
+/*~~~~~~~~~~~~~~Product~~~~~~~~~~~~~~*/
+.products			{background-position: -10px  -168px;}
+a.products:hover	{background-position: -146px -168px;}
+/*~~~~~~~~~~~~~~SimsForSale~~~~~~~~~~~~~~*/
+.sims				{background-position: -10px  -210px;}
+a.sims:hover		{background-position: -146px -210px;}
+/*~~~~~~~~~~~~~~PartsForSale~~~~~~~~~~~~~~*/
+.parts				{background-position: -10px  -252px;}
+a.parts:hover		{background-position: -146px -252px;}
+/*~~~~~~~~~~~~~~DevicesForSale~~~~~~~~~~~~~~*/
+.devices 			{background-position: -10px -294px;}
+a.devices:hover 		{background-position: -146px -294px;}
+/*~~~~~~~~~~~~~~Training~~~~~~~~~~~~~~*/
+.training			{background-position: -10px -336px;}
+a.training:hover 	{background-position: -146px -336px;}
+/*~~~~~~~~~~~~~~Consulting~~~~~~~~~~~~~~*/
+.consulting 			{background-position: -10px -378px;}
+a.consulting:hover	{background-position: -146px -378px;}
+/*~~~~~~~~~~~~~~Links~~~~~~~~~~~~~~*/
+.link 				{background-position: -10px -420px;}
+a.link:hover 		{background-position: -146px -420px;}
+/*~~~~~~~~~~~~~~Contacts~~~~~~~~~~~~~~*/
+.contact 			{background-position: -10px -462px;}
+a.contact:hover		{background-position: -146px -462px;}
+
+/* Footer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*Copyright Solid State*/
+a.copyright {
+position:absolute;
+z-index:2;
+width:14px;
+height:14px;
+top:20px;
+right:12px;
+cursor:hand;
+background-image:url('/copyright.gif');
+background-repeat:no-repeat;
+}
+
+/*Copyright Hover State*/
+a.copyright:hover {
+width:208px;
+background-image:url('/copyright.gif');
+background-repeat:no-repeat;
+background-position:-14px 0px;
+}
+
+/* Miscellaneous
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* Custom JPA Theme Horizontal Rule*/
+.hr {
+background:url("/hr.gif") no-repeat;
+width:100%;
+display:block;
+height:1px;
+float:left;
+}
+
+/*Thumbnail Bar - Stacks thumbnails in a container*/
+.thumbs {
+position:relative;
+width:auto;
+height:auto;
+display:block;
+margin:0 auto;
+cursor:pointer;
+text-align:center;
+}
+
+/*Floating Pic (Used by FadoMatic)*/
+.pic_over {
+position:absolute;
+z-index:5;
+width:600px;
+height:450px;
+top:0px;
+left:110px;
+display:none;
+margin-left:-8px;
+padding:3px;
+border:1px solid #00CCCC;
+background-color:#ffffff;
+cursor:pointer;
+}
+
+.pic_over img {
+width:600px;
+height:450px;
+}
+
+
+/* Sims_For_Sale/index.php & Devices_For_Sale/index.php
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*Simulator and Device Layout Frame*/
+.sim, .device {
+position:relative;
+width:100%;
+height:auto;
+display:inline;
+float:left;
+margin-bottom:10px;
+background:url("/hr.gif") bottom no-repeat;
+}
+
+/*Simulator and Device Pic Container Cell*/
+.simpic_container, .devicepic_container {
+position:relative;
+width:175px;
+height:155px;
+display:inline;
+float:left;
+}
+
+/*Simulator and Device Pic*/
+.simpic, .devicepic {
+position:absolute;
+width:150px;
+height:150px;
+margin-right:15px;
+margin-left:10px;
+background-repeat:no-repeat;
+background-position:center center;
+}
+
+/*Simulator and Device  Gallery Link*/
+.galleryicon {
+position:absolute;
+width:175px;
+height:30px;
+top:100px;
+z-index:2;
+background-image:url('/gallery.png');
+background-repeat:no-repeat;
+background-position:center center;
+cursor:pointer;
+}
+
+/*Simulator and Device Title*/
+.simtitle, .devicetitle {
+position:relative;
+width:auto;
+height:25px;
+overflow:hidden;
+padding-left:10px;
+background:url("/hr.gif") no-repeat bottom;
+font-size:17px;
+font-weight:bold;
+color:#006666;
+}
+
+/*Simulator and Device Description*/
+.simtext, .devicetext {
+position:relative;
+width:100%;
+height:auto;
+display:inline;
+}
+
+/*Device Listings Title Layout*/
+.devicelisting {
+width:200px;
+overflow:hidden;
+margin-top:15px;
+background:url('/hr.gif') no-repeat bottom;
+}
+
+/*Simulator Sold Watermark*/
+.simsold {
+background:url("/sim_sold.gif") bottom no-repeat;
+}

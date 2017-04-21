@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Sim Parts For Sale - Joel Plaice and Associates Inc.</title>
+<meta name="description" content="" /><meta http-equiv= "content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="keywords" content="" />
+<meta name="author" content="Evan Plaice" />
+<meta charset="utf-8">
+<link rel="stylesheet" href="/base.css" />
+<link rel="stylesheet" href="/typeface.css" /><script src="/global.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style>
+thead {
+color:#444444;
+font-weight:bold;
+}
+
+.part {
+position:relative;
+width:265px;
+height:315px;
+float:left; 
+background-image:url("/hr_part.gif");
+background-repeat:no-repeat;
+}
+
+/*Simulator Part Pic*/
+.partpic {
+position:relative;
+width:150px;
+height:150px;
+display:block;
+margin:0 auto;
+background-repeat:no-repeat;
+background-position:center center;
+}
+
+/*Simulator Part Title*/
+.parttitle {
+position:relative;
+width:auto;
+height:25px;
+float:left;
+padding-left:15px;
+background: url("/hr.gif") no-repeat bottom;  
+font-size:17px;
+font-weight:bold;
+}
+
+/*Simulator Part Description*/
+.parttext {
+position:relative;
+width:245px;
+height:75px;
+float:left;
+padding:10px;
+overflow:hidden; 
+font-size:14px;
+text-align:justify;
+}
+</style>
+</head>
+
+<body onload="screen_res();<!--<?php echo $onload;?>-->">
+<!--Main Container-->
+<table align="center"><tr><td>
+<div class="container"> 
+
+<!--Title Bar and Nav Bar Background-->
+<div class="titlebar"></div>
+
+<!--NavBar-->
+<div class=navbar> 
+<a class=home href="/"></a>
+<a class=home_txt href="/">Home</a>
+
+<a class=about href="/about-us"></a> 
+<a class=about_txt href="/about-us">About Us</a>
+
+<a class=press href="/press-releases"></a> 
+<a class=press_txt href="/press-releases">Press Releases</a> 
+ 
+<a class=project href="/projects"></a> 
+<a class=project_txt href="/projects">Projects</a> 
+
+<a class=products href="/sim-products"></a> 
+<a class=products_txt href="/sim-products">Sim Products</a>
+
+<a class=sims href="/sims-for-sale"></a> 
+<a class=sims_txt href="/sims-for-sale">Sims For Sale</a> 
+
+<a class=parts href="/parts-for-sale"></a> 
+<a class=parts_txt href="/parts-for-sale">Parts For Sale</a> 
+
+<a class=devices href="/devices-for-sale"></a>
+<a class=devices_txt href="/devices-for-sale">Devices for Sale</a>
+
+<a class=training href="/training"></a>
+<a class=training_txt href="/training">Training</a>
+
+<a class=consulting href="/consulting"></a> 	
+<a class=consulting_txt href="/consulting">Consulting</a> 
+
+<a class=link href="/links"></a> 
+<a class=link_txt href="/links">Links</a> 
+
+<a class=contact href="/contact-us"></a> 	
+<a class=contact_txt href="/contact-us">Contact Us</a> 
+</div>
+
+<div class="body_background"></div>
+<div id="body">
+<h1 class="h1">Flight Simulator Parts For Sale</h1>
+<div class="breadcrumb"><!--<?php include_once ($_SERVER['DOCUMENT_ROOT'].'/_script/breadcrumbs.php');?>--></div>
+
+<!-- page_content template -->
+<!--<div class="p1">-->
+
+<fieldset>
+<legend>Packages</legend>
+<div style="width:auto;height:125px;overflow:scroll;padding-right:10px">
+<div style="padding-bottom:5px;background-color:#E0E0E0;">
+  <div style="">E&S 3000 Image Generator</div>
+  <div class="text" style="font-size:small;">A 3 channel E&S 3000 series Image Generator complete except for software and disc drive(s).</div>
+</div>
+<div style="padding-bottom:5px;background-color:#FFFFFF;">
+  <div style="">Vital IV Single Channel</div>
+  <div class="text" style="font-size:small;">A complete single channel IG system and supporting parts less monitors. HDD contains operational software. Backups on 8" FD.</div>
+</div>
+<div style="padding-bottom:5px;background-color:#E0E0E0;">
+  <div style="">Encore Gould Equipment</div>
+  <div class="text" style="font-size:small;">This is a consignment of Gould/Encore parts held as spares in a simulator shop recently.  They will all be run through a system after ordered to ensure proper operation before shipping.  More parts will be in shortly, so keep an eye on this section.</div>
+</div>
+<div style="padding-bottom:5px;background-color:#FFFFFF;">
+  <div style="">Singer Link AST Parts</div>
+  <div class="text" style="font-size:small;">A huge lot of AST linkage PCB's</div>
+</div>
+</div>
+</fieldset>
+
+<fieldset>
+<legend>Filters</legend>
+<form action="index.php" method="get">
+<table style="text-align:center;" width="100%" border="1">
+<tr>
+<td>
+	Category:<br />
+	<select name="category" id="category">
+		<option value="">No Filter</option>
+		<option value="Host Computer">Host Computer</option>
+		<option value="Linkage">Linkage</option>
+		<option value="Motion">Motion</option>
+		<option value="Visual">Visual</option>
+	</select><br />
+	<input type="text" size="10" style="text-align:center" disabled="disabled" value="<?php echo $_REQUEST['category'];?>" />
+</td>
+<td>
+	Part Type:<br />
+	<select name="type" id="type">
+		<option value="">No Filter</option>
+		<option value="Amplifier">Amplifier</option>
+		<option value="Backplane Chassis">Backplane</option>
+		<option value="Disc Drive">Disc Drive</option>
+		<option value="Misc">Misc</option>
+		<option value="Module">Module</option>
+		<option value="PCB">PCB</option>
+		<option value="Power Supply">Power Supply</option>
+		
+	</select><br />
+	<input type="text" size="10" style="text-align:center" disabled="disabled" value="<?php echo $_REQUEST['type'];?>" />
+</td>
+<td>
+	Sort By:<br />
+	<select name="order" id="order">
+		<option value="">No Filter</option>
+		<option value="iManufacturer">Manufacturer</option>
+		<option value="iMPartNumber">Manufacturer PN</option>
+		<option value="iSimCategory">Category</option>
+		<option value="iPartType">Type</option>
+	</select><br />
+	<input type="text" size="15" style="text-align:center" disabled="disabled" value="<?php echo $_REQUEST['order'];?>" />
+</td>
+<td>
+	Asce: <input type="radio" name="by" id="by" value="ASC" checked="yes" /><br />
+	Desc: <input type="radio" name="by" id="by" value="DESC" /><br />
+	<input type="text" size="4" style="text-align:center" disabled="disabled" value="<?php echo $_REQUEST['by'];?>" />
+</td>
+<td>
+	Results<br />
+	<select name="limit" id="limit">
+		<option value="25">25</option>
+		<option value="50">50</option>
+		<option value="75">75</option>
+		<option value="100">100</option>
+	</select><br />
+	<input type="text" size="3" style="text-align:center" disabled="disabled" value="<?php echo $_REQUEST['limit'];?>" />
+</td>
+<td>
+	<input type="submit" value="Update" />
+</td>
+</tr>
+</table>
+</form>
+</fieldset>
+
+<!-- end template -->
+
+<!--Close Main Body-->
+</div>
+
+<!--Bottom Bar-->
+<div class="bottom_bar"> 
+	<a class="copyright" href="/copyright"></a>
+</div>
+
+<!--Close Main Container-->
+</div>
+</td></tr></table>
+
+<!--Google Analytics Tracker-->
+<script src="http://www.google-analytics.com/urchin.js"></script>
+<script>_uacct = "UA-3478592-1";urchinTracker();</script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE devices [
+  <!ELEMENT device        (identifier|dir|gallery|images|description|features?|parts?|sold)>
+  <!ELEMENT identifier    (#PCDATA)>
+  <!ELEMENT dir			      (#PCDATA)>
+  <!ELEMENT gallery		    (#PCDATA)>
+  <!ELEMENT images	      (#PCDATA)>
+  <!ELEMENT description	  (#PCDATA)>
+  <!ELEMENT features	    (item?)>
+  <!ELEMENT parts		      (item?)>
+  <!ELEMENT item		      (#PCDATA)>
+  <!ELEMENT sold		      (#PCDATA)>
+
+  <!ATTLIST device number CDATA #REQUIRED>
+]>
+
+<devices>
+  <device number="001">
+    <identifier>Singer Link AST Test Bench</identifier>
+    <dir>/devices_for_sale/device001/</dir>
+    <gallery>yes</gallery>
+    <images>10</images>
+    <description>Fully Functional Singer Link Test Bench. This AST test bench can come with or without a Gould 32/77 computer and AST Master Controller.  It does not have cables but does have documentation on the unit.  The unit worked prior to its shipment two years ago and has been stored in an environmentally controlled warehouse.</description>
+    <features>
+      <item>Impressive patch panel for configuring custom testing.</item>
+      <item>Capable of testing all Singer Link AST linkage cards</item>
+    </features>
+    <parts>
+      <item>Singer Link Test Bench - PN: 10048G9-01 Rev. B</item>
+      <item>Extender Card - LPN # 2010886-02</item>
+      <item>Extender Card - LPN # 2010886-02</item>
+      <item>Extender Card - LPN # 2010886-02</item>
+      <item>Extender Card - LPN # 2010886-02</item>
+      <item>Extender Card - LPN # 2010886-02</item>
+      <item>Extender Card - LPN # 2010886-02</item>
+      <item>Extender Card - LPN # 2010886-02</item>
+      <item>Power Supply - +/- 15vdc 12a - SPS 2152</item>
+      <item>Power Supply - +/- 5vdc 240a - SPS 2150</item>
+      <item>Power Supply - + 10vdc 6a - 8140113</item>
+      <item>Power Supply - + 28vdc 28a - SPS 2151</item>
+      <item>Power Supply - + 28vdc 68a - SPS 2149</item>
+    </parts>
+    <sold>no</sold>
+  </device>
+</devices>

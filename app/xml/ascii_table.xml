@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE ascii_conversions [
+  <!ELEMENT ascii (html?|hex?|oct?|dec?)>
+  <!ELEMENT html		(#PCDATA)> <!-- HTML format (Optional)--> 
+  <!ELEMENT hex			(#PCDATA)> <!--Hexadecimal format (Optional)-->
+  <!ELEMENT oct			(#PCDATA)> <!--Octal format (Optional)-->
+  <!ELEMENT dec			(#PCDATA)> <!--Decimal format (Optional)-->
+
+  <!ATTLIST ascii char CDATA #REQUIRED>
+]>
+
+<ascii_conversions>
+	<ascii char=" ">
+		<html>&#32;</html>
+		<hex>20</hex>
+		<oct>40</oct>
+		<dec>32</dec>
+	</ascii>
+	<ascii char="!">
+		<html>&#33;</html>
+		<hex>21</hex>
+		<oct>41</oct>
+		<dec>33</dec>
+	</ascii>
+	<ascii char="$quot;">
+		<html>&#34;</html>
+		<hex>22</hex>
+		<oct>42</oct>
+		<dec>34</dec>
+	</ascii>
+	<ascii char="#">
+		<html>&#35;</html>
+		<hex>23</hex>
+		<oct>43</oct>
+		<dec>35</dec>
+	</ascii>
+	<ascii char="$">
+		<html>&#36;</html>
+		<hex>24</hex>
+		<oct>44</oct>
+		<dec>36</dec>
+	</ascii>
+	<ascii char="%">
+		<html>&#37;</html>
+		<hex>25</hex>
+		<oct>45</oct>
+		<dec>37</dec>
+	</ascii>
+	<ascii char="&amp;">
+		<html>&#38;</html>
+		<hex>26</hex>
+		<oct>46</oct>
+		<dec>38</dec>
+	</ascii>
+	<ascii char="&apos;">
+		<html>&#39;</html>
+		<hex>27</hex>
+		<oct>47</oct>
+		<dec>39</dec>
+	</ascii>
+	<ascii char="(">
+		<html>&#40;</html>
+		<hex>28</hex>
+		<oct>50</oct>
+		<dec>40</dec>
+	</ascii>
+	<ascii char=")">
+		<html>&#41;</html>
+		<hex>29</hex>
+		<oct>51</oct>
+		<dec>41</dec>
+	</ascii>
+	<ascii char="*">
+		<html>&#42;</html>
+		<hex>2a</hex>
+		<oct>52</oct>
+		<dec>42</dec>
+	</ascii>
+	<ascii char="+">
+		<html>&#43;</html>
+		<hex>2b</hex>
+		<oct>53</oct>
+		<dec>43</dec>
+	</ascii>
+	<ascii char=",">
+		<html>&#44;</html>
+		<hex>2c</hex>
+		<oct>54</oct>
+		<dec>44</dec>
+	</ascii>
+	<ascii char="-">
+		<html>&#45;</html>
+		<hex>2d</hex>
+		<oct>55</oct>
+		<dec>45</dec>
+	</ascii>
+	<ascii char=".">
+		<html>&#46;</html>
+		<hex>2e</hex>
+		<oct>56</oct>
+		<dec>46</dec>
+	</ascii>
+	<ascii char="/">
+		<html>&#47;</html>
+		<hex>2f</hex>
+		<oct>57</oct>
+		<dec>47</dec>
+	</ascii>
+	<ascii char="0">
+		<html>&#48;</html>
+		<hex>30</hex>
+		<oct>60</oct>
+		<dec>48</dec>
+	</ascii>
+	<ascii char="1">
+		<html>&#49;</html>
+		<hex>31</hex>
+		<oct>61</oct>
+		<dec>49</dec>
+	</ascii>
+	<ascii char="2">
+		<html>&#50;</html>
+		<hex>32</hex>
+		<oct>62</oct>
+		<dec>50</dec>
+	</ascii>
+	<ascii char="3">
+		<html>&#51;</html>
+		<hex>33</hex>
+		<oct>63</oct>
+		<dec>51</dec>
+	</ascii>
+	<ascii char="4">
+		<html>&#52;</html>
+		<hex>34</hex>
+		<oct>64</oct>
+		<dec>52</dec>
+	</ascii>
+	<ascii char="5">
+		<html>&#53;</html>
+		<hex>35</hex>
+		<oct>65</oct>
+		<dec>53</dec>
+	</ascii>
+	<ascii char="6">
+		<html>&#54;</html>
+		<hex>36</hex>
+		<oct>66</oct>
+		<dec>54</dec>
+	</ascii>
+	<ascii char="7">
+		<html>&#55;</html>
+		<hex>37</hex>
+		<oct>67</oct>
+		<dec>55</dec>
+	</ascii>
+	<ascii char="8">
+		<html>&#56;</html>
+		<hex>38</hex>
+		<oct>70</oct>
+		<dec>56</dec>
+	</ascii>
+	<ascii char="9">
+		<html>&#57;</html>
+		<hex>39</hex>
+		<oct>71</oct>
+		<dec>57</dec>
+	</ascii>
+	<ascii char=":">
+		<html>&#58;</html>
+		<hex>3a</hex>
+		<oct>72</oct>
+		<dec>58</dec>
+	</ascii>
+	<ascii char=";">
+		<html>&#59;</html>
+		<hex>3b</hex>
+		<oct>73</oct>
+		<dec>59</dec>
+	</ascii>
+	<ascii char="&lt;">
+		<html>&#60;</html>
+		<hex>3c</hex>
+		<oct>74</oct>
+		<dec>60</dec>
+	</ascii>
+	<ascii char="=">
+		<html>&#61;</html>
+		<hex>3d</hex>
+		<oct>75</oct>
+		<dec>61</dec>
+	</ascii>
+	<ascii char="&gt;">
+		<html>&#62;</html>
+		<hex>3e</hex>
+		<oct>76</oct>
+		<dec>62</dec>
+	</ascii>
+	<ascii char="?">
+		<html>&#63;</html>
+		<hex>3f</hex>
+		<oct>77</oct>
+		<dec>63</dec>
+	</ascii>
+	<ascii char="@">
+		<html>&#64;</html>
+		<hex>40</hex>
+		<oct>100</oct>
+		<dec>64</dec>
+	</ascii>
+	<ascii char="A">
+		<html>&#65;</html>
+		<hex>41</hex>
+		<oct>101</oct>
+		<dec>65</dec>
+	</ascii>
+	<ascii char="B">
+		<html>&#66;</html>
+		<hex>42</hex>
+		<oct>102</oct>
+		<dec>66</dec>
+	</ascii>
+	<ascii char="C">
+		<html>&#67;</html>
+		<hex>43</hex>
+		<oct>103</oct>
+		<dec>67</dec>
+	</ascii>
+	<ascii char="D">
+		<html>&#68;</html>
+		<hex>44</hex>
+		<oct>104</oct>
+		<dec>68</dec>
+	</ascii>
+	<ascii char="E">
+		<html>&#69;</html>
+		<hex>45</hex>
+		<oct>105</oct>
+		<dec>69</dec>
+	</ascii>
+	<ascii char="F">
+		<html>&#70;</html>
+		<hex>46</hex>
+		<oct>106</oct>
+		<dec>70</dec>
+	</ascii>
+	<ascii char="G">
+		<html>&#71;</html>
+		<hex>47</hex>
+		<oct>107</oct>
+		<dec>71</dec>
+	</ascii>
+	<ascii char="H">
+		<html>&#72;</html>
+		<hex>48</hex>
+		<oct>110</oct>
+		<dec>72</dec>
+	</ascii>
+	<ascii char="I">
+		<html>&#73;</html>
+		<hex>49</hex>
+		<oct>111</oct>
+		<dec>73</dec>
+	</ascii>
+	<ascii char="J">
+		<html>&#74;</html>
+		<hex>4a</hex>
+		<oct>112</oct>
+		<dec>74</dec>
+	</ascii>
+	<ascii char="K">
+		<html>&#75;</html>
+		<hex>4b</hex>
+		<oct>113</oct>
+		<dec>75</dec>
+	</ascii>
+	<ascii char="L">
+		<html>&#76;</html>
+		<hex>4c</hex>
+		<oct>114</oct>
+		<dec>76</dec>
+	</ascii>
+	<ascii char="M">
+		<html>&#77;</html>
+		<hex>4d</hex>
+		<oct>115</oct>
+		<dec>77</dec>
+	</ascii>
+	<ascii char="N">
+		<html>&#78;</html>
+		<hex>4e</hex>
+		<oct>116</oct>
+		<dec>78</dec>
+	</ascii>
+	<ascii char="O">
+		<html>&#79;</html>
+		<hex>4f</hex>
+		<oct>117</oct>
+		<dec>79</dec>
+	</ascii>
+	<ascii char="P">
+		<html>&#80;</html>
+		<hex>50</hex>
+		<oct>120</oct>
+		<dec>80</dec>
+	</ascii>
+	<ascii char="Q">
+		<html>&#81;</html>
+		<hex>51</hex>
+		<oct>121</oct>
+		<dec>81</dec>
+	</ascii>
+	<ascii char="R">
+		<html>&#82;</html>
+		<hex>52</hex>
+		<oct>122</oct>
+		<dec>82</dec>
+	</ascii>
+	<ascii char="S">
+		<html>&#83;</html>
+		<hex>53</hex>
+		<oct>123</oct>
+		<dec>83</dec>
+	</ascii>
+	<ascii char="T">
+		<html>&#84;</html>
+		<hex>54</hex>
+		<oct>124</oct>
+		<dec>84</dec>
+	</ascii>
+	<ascii char="U">
+		<html>&#85;</html>
+		<hex>55</hex>
+		<oct>125</oct>
+		<dec>85</dec>
+	</ascii>
+	<ascii char="V">
+		<html>&#86;</html>
+		<hex>56</hex>
+		<oct>126</oct>
+		<dec>86</dec>
+	</ascii>
+	<ascii char="W">
+		<html>&#87;</html>
+		<hex>57</hex>
+		<oct>127</oct>
+		<dec>87</dec>
+	</ascii>
+	<ascii char="X">
+		<html>&#88;</html>
+		<hex>58</hex>
+		<oct>130</oct>
+		<dec>88</dec>
+	</ascii>
+	<ascii char="Y">
+		<html>&#89;</html>
+		<hex>59</hex>
+		<oct>131</oct>
+		<dec>89</dec>
+	</ascii>
+	<ascii char="Z">
+		<html>&#90;</html>
+		<hex>5a</hex>
+		<oct>132</oct>
+		<dec>90</dec>
+	</ascii>
+	<ascii char="[">
+		<html>&#91;</html>
+		<hex>5b</hex>
+		<oct>133</oct>
+		<dec>91</dec>
+	</ascii>
+	<ascii char="\">
+		<html>&#92;</html>
+		<hex>5c</hex>
+		<oct>134</oct>
+		<dec>92</dec>
+	</ascii>
+	<ascii char="]">
+		<html>&#93;</html>
+		<hex>5d</hex>
+		<oct>135</oct>
+		<dec>93</dec>
+	</ascii>
+	<ascii char="^">
+		<html>&#94;</html>
+		<hex>5e</hex>
+		<oct>136</oct>
+		<dec>94</dec>
+	</ascii>
+	<ascii char="_">
+		<html>&#95;</html>
+		<hex>5f</hex>
+		<oct>137</oct>
+		<dec>95</dec>
+	</ascii>
+	<ascii char="`">
+		<html>&#96;</html>
+		<hex>60</hex>
+		<oct>140</oct>
+		<dec>96</dec>
+	</ascii>
+	<ascii char="a">
+		<html>&#97;</html>
+		<hex>61</hex>
+		<oct>141</oct>
+		<dec>97</dec>
+	</ascii>
+	<ascii char="b">
+		<html>&#98;</html>
+		<hex>62</hex>
+		<oct>142</oct>
+		<dec>98</dec>
+	</ascii>
+	<ascii char="c">
+		<html>&#99;</html>
+		<hex>63</hex>
+		<oct>143</oct>
+		<dec>99</dec>
+	</ascii>
+	<ascii char="d">
+		<html>&#100;</html>
+		<hex>64</hex>
+		<oct>144</oct>
+		<dec>100</dec>
+	</ascii>
+	<ascii char="e">
+		<html>&#101;</html>
+		<hex>65</hex>
+		<oct>145</oct>
+		<dec>101</dec>
+	</ascii>
+	<ascii char="f">
+		<html>&#102;</html>
+		<hex>66</hex>
+		<oct>146</oct>
+		<dec>102</dec>
+	</ascii>
+	<ascii char="g">
+		<html>&#103;</html>
+		<hex>67</hex>
+		<oct>147</oct>
+		<dec>103</dec>
+	</ascii>
+	<ascii char="h">
+		<html>&#104;</html>
+		<hex>68</hex>
+		<oct>150</oct>
+		<dec>104</dec>
+	</ascii>
+	<ascii char="i">
+		<html>&#105;</html>
+		<hex>69</hex>
+		<oct>151</oct>
+		<dec>105</dec>
+	</ascii>
+	<ascii char="j">
+		<html>&#106;</html>
+		<hex>6a</hex>
+		<oct>152</oct>
+		<dec>106</dec>
+	</ascii>
+	<ascii char="k">
+		<html>&#107;</html>
+		<hex>6b</hex>
+		<oct>153</oct>
+		<dec>107</dec>
+	</ascii>
+	<ascii char="l">
+		<html>&#108;</html>
+		<hex>6c</hex>
+		<oct>154</oct>
+		<dec>108</dec>
+	</ascii>
+	<ascii char="m">
+		<html>&#109;</html>
+		<hex>6d</hex>
+		<oct>155</oct>
+		<dec>109</dec>
+	</ascii>
+	<ascii char="n">
+		<html>&#110;</html>
+		<hex>6e</hex>
+		<oct>156</oct>
+		<dec>110</dec>
+	</ascii>
+	<ascii char="o">
+		<html>&#111;</html>
+		<hex>6f</hex>
+		<oct>157</oct>
+		<dec>111</dec>
+	</ascii>
+	<ascii char="p">
+		<html>&#112;</html>
+		<hex>70</hex>
+		<oct>160</oct>
+		<dec>112</dec>
+	</ascii>
+	<ascii char="q">
+		<html>&#113;</html>
+		<hex>71</hex>
+		<oct>161</oct>
+		<dec>113</dec>
+	</ascii>
+	<ascii char="r">
+		<html>&#114;</html>
+		<hex>72</hex>
+		<oct>162</oct>
+		<dec>114</dec>
+	</ascii>
+	<ascii char="s">
+		<html>&#115;</html>
+		<hex>73</hex>
+		<oct>163</oct>
+		<dec>115</dec>
+	</ascii>
+	<ascii char="t">
+		<html>&#116;</html>
+		<hex>74</hex>
+		<oct>164</oct>
+		<dec>116</dec>
+	</ascii>
+	<ascii char="u">
+		<html>&#117;</html>
+		<hex>75</hex>
+		<oct>165</oct>
+		<dec>117</dec>
+	</ascii>
+	<ascii char="v">
+		<html>&#118;</html>
+		<hex>76</hex>
+		<oct>166</oct>
+		<dec>118</dec>
+	</ascii>
+	<ascii char="w">
+		<html>&#119;</html>
+		<hex>77</hex>
+		<oct>167</oct>
+		<dec>119</dec>
+	</ascii>
+	<ascii char="x">
+		<html>&#120;</html>
+		<hex>78</hex>
+		<oct>170</oct>
+		<dec>120</dec>
+	</ascii>
+	<ascii char="y">
+		<html>&#121;</html>
+		<hex>79</hex>
+		<oct>171</oct>
+		<dec>121</dec>
+	</ascii>
+	<ascii char="z">
+		<html>&#122;</html>
+		<hex>7a</hex>
+		<oct>172</oct>
+		<dec>122</dec>
+	</ascii>
+	<ascii char="{">
+		<html>&#123;</html>
+		<hex>7b</hex>
+		<oct>173</oct>
+		<dec>123</dec>
+	</ascii>
+	<ascii char="|">
+		<html>&#124;</html>
+		<hex>7c</hex>
+		<oct>174</oct>
+		<dec>124</dec>
+	</ascii>
+	<ascii char="}">
+		<html>&#125;</html>
+		<hex>7d</hex>
+		<oct>175</oct>
+		<dec>125</dec>
+	</ascii>
+	<ascii char="~">
+		<html>&#126;</html>
+		<hex>7e</hex>
+		<oct>176</oct>
+		<dec>126</dec>
+	</ascii>
+	<ascii char="">
+		<html>&#127;</html>
+		<hex>7f</hex>
+		<oct>177</oct>
+		<dec>127</dec>
+	</ascii>
+</ascii_conversions>

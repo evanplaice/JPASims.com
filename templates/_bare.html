@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>{{ title }} - Joel Plaice and Associates Inc.</title>
+<meta name="description" content="{{ description }}" />
+<meta name="keywords" content="{{ keywords|join(', ') }}" />
+<meta name="author" content="Evan Plaice" />
+<meta charset="utf-8">
+<link rel="stylesheet" href="/bare.css" />
+{%- block page_css %}{% endblock -%}
+{%- block plugin_css %}{% endblock -%}
+<style>
+{%- block page_style %}
+{% endblock -%}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+{%- block page_js %}{% endblock -%}
+{%- block plugin_js %}{% endblock -%}
+{%- block page_script %}{% endblock -%}
+</head>
+
+<body>
+<div class="container">
+
+<!-- page_content template -->
+{%- block page_content %}{% endblock -%}
+<!-- end template -->
+
+</div>
+</body>
+</html>

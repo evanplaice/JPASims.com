@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<title>TCAS Overview - Joel Plaice and Associates Inc.</title>
+<meta name="description" content="" /><meta http-equiv= "content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="keywords" content="" />
+<meta name="author" content="Evan Plaice" />
+<meta charset="utf-8">
+<link rel="stylesheet" href="/base.css" />
+<link rel="stylesheet" href="/typeface.css" /><script src="/global.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style>
+</style>
+</head>
+
+<body onload="screen_res();<!--<?php echo $onload;?>-->">
+<!--Main Container-->
+<table align="center"><tr><td>
+<div class="container"> 
+
+<!--Title Bar and Nav Bar Background-->
+<div class="titlebar"></div>
+
+<!--NavBar-->
+<div class=navbar> 
+<a class=home href="/"></a>
+<a class=home_txt href="/">Home</a>
+
+<a class=about href="/about-us"></a> 
+<a class=about_txt href="/about-us">About Us</a>
+
+<a class=press href="/press-releases"></a> 
+<a class=press_txt href="/press-releases">Press Releases</a> 
+ 
+<a class=project href="/projects"></a> 
+<a class=project_txt href="/projects">Projects</a> 
+
+<a class=products href="/sim-products"></a> 
+<a class=products_txt href="/sim-products">Sim Products</a>
+
+<a class=sims href="/sims-for-sale"></a> 
+<a class=sims_txt href="/sims-for-sale">Sims For Sale</a> 
+
+<a class=parts href="/parts-for-sale"></a> 
+<a class=parts_txt href="/parts-for-sale">Parts For Sale</a> 
+
+<a class=devices href="/devices-for-sale"></a>
+<a class=devices_txt href="/devices-for-sale">Devices for Sale</a>
+
+<a class=training href="/training"></a>
+<a class=training_txt href="/training">Training</a>
+
+<a class=consulting href="/consulting"></a> 	
+<a class=consulting_txt href="/consulting">Consulting</a> 
+
+<a class=link href="/links"></a> 
+<a class=link_txt href="/links">Links</a> 
+
+<a class=contact href="/contact-us"></a> 	
+<a class=contact_txt href="/contact-us">Contact Us</a> 
+</div>
+
+<div class="body_background"></div>
+<div id="body">
+<h1 class="h1">TCAS (Traffic Collision Avoidance System)</h1>
+<div class="breadcrumb"><!--<?php include_once ($_SERVER['DOCUMENT_ROOT'].'/_script/breadcrumbs.php');?>--></div>
+
+<!-- page_content template -->
+<div class="p1">The current TCAS product supplied is a simulated TCAS II Change 7.0 Traffic Collision Avoidance System.  The system provided by JPA is in use in some twenty five simulators.  The system is compliant with the European ACAS II standard.  To ensure the utmost fidelity, the simulation faithfully follows the FAA TCAS II Minimum Operational Performance Specification (MOPS) and is verified using the actual test cases with which manufacturers of TCAS equipment are required to test their airborne equipment.  The acclaimed instructor's interface permits the selection of any of the comprehensive list of encounters at the touch of a button.</div>
+<div class="p1">The TCAS system hardware is based upon commercial off-the-shelf items and uses a rack-mounted TCAS PC and interface unit.  In order to minimise the impact upon the simulator host computer the TCAS simulation is performed within the TCAS PC.  The rack mounted interface unit eliminates most of the backplane wiring and inter-cabling that is normally a feature of a typical simulator TCAS upgrade.  In-service reliability and availability are excellent, with our "high time" system (the MK Airlines ex-Virgin 747-200) having reached 52,560 hours.</div>
+<div class="p1">The system can be made to be "switchable" from the instructors station between "TCAS on EFIS" and "TCAS on IVSI". This provides maximum configuration flexibility should different users of the sim require different displays. The switching can be integrated in with the simulator's customer option control system so that the TCAS mode selection will be automatic.</div>
+<div class="p1">The installation can be undertaken in unsold simulator time and unused maintenance time. The project will include the provisioning of the complete systems design, all cables and hardware (except aircraft parts), software updates, several new IOS pages, installation, testing, acceptance, documentation, simulator engineer training and a two year warranty.</div>
+<div class="h2">Detailed Technical Description:</div>
+<div class="p1">The TCAS II simulation system to be described has been designed as a stand-alone upgrade to any type of aircraft simulator.   The system employs an off-the-shelf, IBM compatible PC containing the TCAS simulation software, thereby relieving the main simulation computer of the TCAS computation task.</div>
+<div class="p1">The TCAS simulation computer receives basic aircraft parameters and instructor's inputs from the Motorola simulator computer via either an RS-232 link or a dedicated Ethernet link (as per the Buyer's choice).  It communicates with the TCAS control panel and sends data to the Captain's and F/O's EFIS symbol generators and IVSI displays directly via self-contained ARINC 429 serial data interfaces. Aural warnings (resolution advisories) are synthesised by the PC and output to the cockpit loudspeaker system.</div>
+<div class="p1">Simulation of the aircraft TCAS processor software is based upon pseudo-code algorithms supplied by the FAA as part of their TCAS II Minimum Operational Performance Specification (MOPS).  These algorithms are the same as those used by the TCAS equipment manufacturers to ensure compliance with the FAA requirements.  The simulation is to the latest version 7.0 standard, which contains many enhancements compared with the previous 6.04 version and which has been adopted by Europe as the ACAS II standard.</div>
+<div class="p1">In order to ensure that the Ostrich TCAS system is a true simulation of the real world systems, an automatic verification program was used during its development.  This program uses the same set of standard test conditions and output results that are mandated by the FAA to be used by manufacturers to check the validity of their designs.  The tests cover all types of single and multiple aircraft conflicts and equipment modes.</div>
+<div class="p1">The general arrangement of the proposed TCAS II simulation system is shown below.  An IBM compatible PC containing the TCAS II simulation software receives data from the simulator host computer via a dual RS-232 or Ethernet data link.</div>
+<div class="p1">The TCAS simulation includes the generation of aural warnings whenever resolution advisories are displayed.  These aural warnings are synthesised in the PC and output to the cockpit loudspeaker sound system in the simulator.</div>
+<div class="p1">If there are any aspects of operation and performance for which data is not available, simulation will be based upon the standard published TCAS II algorithms.</div>
+<div class="p1">The TCAS simulation software will perform the following functions:
+  <ul>
+    <li>Manage data transfers between the main simulation computer and TCAS PC</li>
+    <li>Receive and process inputs from the cockpit ATC/TCAS Control Panel, various simulated aircraft systems and the instructor's station</li>
+    <li>Simulate the real time flight paths of threat and other aircraft in a scenario</li>
+    <li>Simulate the operation of the TCAS II equipment, generating traffic and resolution advisories (TAs and RAs) where appropriate.</li>
+    <li>Synthesise aural advisories</li>
+    <li>Format advisories for display on EFIS and IVSI threat displays</li>
+    <li>Simulate system self test modes</li>
+    <li>Display intruder aircraft on any visual system capable of displaying other aircraft</li>
+  </ul>
+</div>
+<div class="p1">The main change to the software held on the simulator host computer will be the addition of a new module which will transfer main aircraft parameters and instructor's station inputs to the TCAS Simulation PC.  The host module will extract the required data from the simulator's common data area, add control information and output the data to the TCAS PC.</div>
+<div class="p1">One or more new instructor's station pages will be provided.  A small amount of additional host computer crosstalk (for malfunctions, etc.) will be required.</div>
+<div class="h2">TCAS Environment</div>
+<div class="p1">To provide realistic training in the use of the TCAS system a simulated external environment containing several TCAS equipped intruder aircraft will be provided.</div>
+<div class="p1">The instructor can select from twelve pre-programmed encounters to provide comprehensive training in all types of single and multi-aircraft threat scenarios.   The hazard aircraft will be injected at beyond TCAS display range and will be pre-programmed to fly toward own aircraft from any direction, speed, relative altitude and height rate.</div>
+<div class="p1">The intruder aircraft will follow flight paths designed to produce various types of advisory display and aural annunciation.  These will range from Traffic Advisory (Traffic, Traffic) and Preventive Resolution Advisories (Monitor Vertical Speed, Maintain Vertical Speed) to Corrective Resolution Advisories (Climb, Climb; Descend, Descend; Climb Crossing Climb; Descend Crossing Descend, Adjust Vertical Speed etc.).  Each of the intruder trajectories may be introduced by simple button selection.</div>
+<div class="p1">To ensure that the desired encounter takes place, hazard aircraft will automatically track and correct for own aircraft manoeuvres until the time that a Resolution Advisory is announced.  For realism, threat aircraft manoeuvres will be limited to normal values, for example, rate one turns.</div>
+<div class="p1">The method used to create and control the intruder environment is highly flexible.  The precise trajectories to be followed by intruder aircraft in each of the twelve encounters will be discussed and agreed with the Buyer's training staff prior to design freeze.</div>
+<div class="p1">In addition to threat aircraft the instructor will have the facility to inject random background traffic that will also appear on the TCAS threat displays.  These aircraft are positioned such that they do not usually cause Traffic or Resolution Advisories but may be made to do so if intentionally flown toward.</div>
+<div class="p1">All aircraft in the scenario will respond to operation of the simulator total freeze and position freeze controls.  The TCAS simulator will detect a collision between the own aircraft and any other aircraft in the scenario and set the simulator crash flag.</div>
+<div class="h2">Traffic and Resolution Advisories</div>
+<div class="p1">TCAS advisories will be accurately simulated and displayed on the threat displays depending upon the relative positions and behaviour of simulated intruding aircraft.</div>
+<div class="p1">Own aircraft is always assumed to have a lower Mode S Identification Code than any of the intruding aircraft.  This ensures that it is always own aircraft that is called upon to perform the escape manoeuvre and to send a message to the intruder not to follow suit.</div>
+<div class="p1">The intruder will not normally manoeuvre in response to an RA but may be made to do so by selecting 'Enable Incorrect Intruder Manoeuvre' at the IOS.  If selected, the intruder will make an escape maneuver at 1,500 fpm in the same direction as that of own aircraft, thereby causing an increased advisory to be issued.  The intruder manoeuvre is triggered by the announcement of the initial RA.  Once the change in intruder height rate to 1,500 fpm has been established, that height rate will be maintained for the remainder of the encounter, i.e. the intruder will not attempt to follow own aircraft's increased height rate.</div>
+<div class="p1">Another facility available to the Instructor for controlling the type of resolution advisory obtained is the selection of 'Forced Reversal'.  Whenever this is selected, any RA will be followed five seconds later by a second RA in the opposite direction.  For example, 'Descend, Descend' will be followed five seconds later by 'Climb, Climb Now, Climb, Climb, Now'.</div>
+<div class="h2">Aural Warnings</div>
+<div class="p1">Whenever a traffic or resolution advisory is displayed on the cockpit threat displays, an appropriate audio warning will be output over the cockpit loudspeakers.  These warning messages will be inhibited if the loudspeakers are already carrying windshear or EGPWS warning messages.</div>
+<div class="p1">The aural warning messages will be stored on the PC hard disk in digital format. The sound generator card contained in the PC will convert these digital files into high quality sound.</div>
+<div class="h2">Display of Intruder Aircraft on the Simulator Visual System</div>
+<div class="p1">Providing that the visual system fitted to the simulator allows the display of freely controllable intruder aircraft then these visual intruders will be displayed under the control of the TCAS simulation system.  The intruder aircraft will exhibit the correct X, Y, Z and heading information. The Seller's responsibility will be limited to outputting the correct data to the visual system computer and will not include any modifications to the visual system or to the visual model database.</div>
+<div class="h2">TCAS Failure Indications</div>
+<div class="p1">Failure indications, including the display of warning flags, will be correctly simulated. The TCAS simulator will sense the state of the simulated electrical buses and any selected malfunctions and provide the correct indications on the threat displays, EICAS and TCAS Control Panel.</div>
+<div class="h2">Instructor Controls</div>
+<div class="p1">The TCAS II simulator will be controlled from the existing instructor's station using new instructor's pages.</div>
+<div class="p1">The following control facilities will be provided:
+  <ul>
+    <li>Insert encounter</li>
+    <li>Insert background traffic</li>
+    <li>Insert malfunction</li>
+    <li>Force reversal of RA</li>
+    <li>Enable incorrect intruder manoeuvre</li>
+  </ul>
+</div>
+<div class="h2">Malfunctions</div>
+<div class="p1">The following malfunctions will be supported:
+  <ul>
+    <li>TCAS computer fail</li>
+    <li>Captain's or F/O's IVSI display fail</li>
+    <li>Transponder L or R fail</li>
+    <li>Generate spurious resolution advisory</li>
+    <li>Generate spurious traffic advisory</li>
+    <li>No bearing information received from transponder</li>
+  </ul>
+</div>
+<div class="p1">Selection of TCAS Fail or either Threat Display Fail will result in the appropriate indications being observed on the relevant displays, including failure flags.</div>
+<div class="p1">Selection of Transponder L or R fail will result in the selected transponder failing.  If the failed transponder is being used by the TCAS, the XPNDR FAIL light on the TCAS Control Panel will illuminate and the TCAS will fail.  Switching to the unfailed transponder will reactivate the TCAS system and threat displays.</div>
+<div class="p1">Selecting a spurious resolution or traffic advisory will result in the nearest aircraft, whether an intruder introduced in a selected encounter or one of the background traffic, to cause a spurious traffic or resolution advisory.  The spurious advisory will generate a single aural warning and, where appropriate, illuminate the threat display red and green bands.</div>
+<div class="p1">The 'No Bearing Information' malfunction simulates the inability of the TCAS computer to determine the relative bearing of an intruder and may be inserted at any time during any of the pre-programmed encounters.  If the intruder is not yet causing a TA or RA the intruder symbol will disappear from the IVSI displays when the malfunction is inserted.  If causing a TA the symbol will be replaced by a yellow legend below own aircraft symbol indicating that a TA is present, together with intruder range, relative height and height trend arrow.  If causing an RA, the symbol will be replaced by a red legend indicating that an RA is present, together with intruder range, relative height and height trend arrow.</div>
+<div class="h2">Diagnostics</div>
+<div class="p1">The TCAS simulation software will include a diagnostic capability. This facility will allow the testing of the communications path between the TCAS computer and the simulator host computer. The diagnostic facility will also verify correct operation of the ARINC-429 channels to the TCAS mode control panel and the two threat displays.</div>
+<div class="h2">Host Computer to TCAS PC Communication</div>
+<div class="p1">The Simulator Host computer will be connected to the TCAS PC by either by an RS-232 line or a dedicated Ethernet link.  The RS-232 line will provide sufficient bandwidth for the operation of the TCAS system. However if an Ethernet link is chosen then there will be substantial unused bandwidth and the TCAS PC could then by used to "host" other simulation code at a later date, for example, the software needed to drive the new standby instrument.</div>
+<div class="p1">The Simulator Host computer will be connected to the TCAS PC by either by an RS-232 line or a dedicated Ethernet link.  The RS-232 line will provide sufficient bandwidth for the operation of the TCAS system. However if an Ethernet link is chosen then there will be substantial unused bandwidth and the TCAS PC could then by used to "host" other simulation code at a later date, for example, the software needed to drive the new standby instrument.</div>
+<div class="p1">Some PC systems have been used to host the Simulated TCAS System, EGPWS, and LTN-92 Nav systems in one PC.</div>
+<!-- end template -->
+
+<!--Close Main Body-->
+</div>
+
+<!--Bottom Bar-->
+<div class="bottom_bar"> 
+	<a class="copyright" href="/copyright"></a>
+</div>
+
+<!--Close Main Container-->
+</div>
+</td></tr></table>
+
+<!--Google Analytics Tracker-->
+<script src="http://www.google-analytics.com/urchin.js"></script>
+<script>_uacct = "UA-3478592-1";urchinTracker();</script>
+
+</body>
+</html>

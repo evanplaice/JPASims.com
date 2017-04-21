@@ -1,0 +1,54 @@
+{% extends '_base.html' %}
+{% block page_content %}
+<h1 style="text-align:center">Database Loader Control Panel</h1>
+<hr />
+<div style="width:50%;float:left;">
+  <fieldset>
+    <legend>Add New Entry</legend>
+    <form enctype="multipart/form-data" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+      <table>
+        <tr>
+          <td><input id="new_file" name="new_file" type="file"><td>
+        </tr>
+        <tr colspan="2">
+          <td><input id="new" name="new" type="submit" value="Upload File" /></td>
+        </tr>
+        <tr>
+          <td><?php echo $new_download;?></td>
+        </tr>
+      </table>
+    </form>
+  </fieldset>
+
+  <fieldset>
+    <legend>Update Existing Entry</legend>
+    <form enctype="multipart/form-data" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+      <table>
+        <tr>
+          <td><input id="update_file" name="update_file" type="file"><td>
+        </tr>
+        <tr colspan="2">
+          <td><input id="update" name="update" type="submit" value="Upload File" /></td>
+        </tr>
+      </table>
+    </form>
+  </fieldset>
+
+  <fieldset>
+    <legend>Dump Table</legend>
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+      <table>
+        <tr>
+          <td><input id="backup" name="backup" type="submit" value="Backup Table"  /></td>
+        </tr>
+        <tr>
+          <td><a href="<?php echo $backup_download;?>"><?php echo $backup_download;?></a></td>
+        </tr>
+        <tr>
+          <td><input id="dump" name="dump" type="submit" value="Dump Table"  /></td>
+        </tr>
+      </table>
+    </form>
+  </fieldset>
+</div>
+{% endblock%}

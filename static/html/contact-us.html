@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Contact Us - Joel Plaice and Associates Inc.</title>
+<meta name="description" content="" /><meta http-equiv= "content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="keywords" content="" />
+<meta name="author" content="Evan Plaice" />
+<meta charset="utf-8">
+<link rel="stylesheet" href="/base.css" />
+<link rel="stylesheet" href="/typeface.css" /><script src="/global.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style>
+.hide {
+display:none;
+}
+
+.contact_form {
+position:relative;
+width:70%;
+height:auto;
+display:block;
+float:left; 
+font-size:80%;
+}
+
+.contact_nfo {
+position:relative;
+width:30%;
+height:auto;
+display:block;
+float:left;
+} 
+
+.c_name {
+font-size:85%;
+text-align:center;
+}
+
+.c_nfo {
+margin-bottom:25px;
+font-size:80%;
+text-align:center;
+}
+</style>
+</head>
+
+<body onload="screen_res();<!--<?php echo $onload;?>-->">
+<!--Main Container-->
+<table align="center"><tr><td>
+<div class="container"> 
+
+<!--Title Bar and Nav Bar Background-->
+<div class="titlebar"></div>
+
+<!--NavBar-->
+<div class=navbar> 
+<a class=home href="/"></a>
+<a class=home_txt href="/">Home</a>
+
+<a class=about href="/about-us"></a> 
+<a class=about_txt href="/about-us">About Us</a>
+
+<a class=press href="/press-releases"></a> 
+<a class=press_txt href="/press-releases">Press Releases</a> 
+ 
+<a class=project href="/projects"></a> 
+<a class=project_txt href="/projects">Projects</a> 
+
+<a class=products href="/sim-products"></a> 
+<a class=products_txt href="/sim-products">Sim Products</a>
+
+<a class=sims href="/sims-for-sale"></a> 
+<a class=sims_txt href="/sims-for-sale">Sims For Sale</a> 
+
+<a class=parts href="/parts-for-sale"></a> 
+<a class=parts_txt href="/parts-for-sale">Parts For Sale</a> 
+
+<a class=devices href="/devices-for-sale"></a>
+<a class=devices_txt href="/devices-for-sale">Devices for Sale</a>
+
+<a class=training href="/training"></a>
+<a class=training_txt href="/training">Training</a>
+
+<a class=consulting href="/consulting"></a> 	
+<a class=consulting_txt href="/consulting">Consulting</a> 
+
+<a class=link href="/links"></a> 
+<a class=link_txt href="/links">Links</a> 
+
+<a class=contact href="/contact-us"></a> 	
+<a class=contact_txt href="/contact-us">Contact Us</a> 
+</div>
+
+<div class="body_background"></div>
+<div id="body">
+<h1 class="h1">Contact Information</h1>
+<div class="breadcrumb"><!--<?php include_once ($_SERVER['DOCUMENT_ROOT'].'/_script/breadcrumbs.php');?>--></div>
+
+<!-- page_content template -->
+<table width="100%">
+<tr>
+<td style="width:60%" align="center">
+<form name="contact_form" action="index.php" method="post">
+  <fieldset>
+  <legend>E-Mail Form</legend>
+    <table class="p1">
+    <tr>
+    <td>Your Name:</td>
+    <td><input name="name" id="name" type="text" value=""></td>
+    </tr>
+    <tr>
+    <td>Your E-Mail:</td>
+    <td><input name="email" id="email" type="text" value=""></td>
+    </tr>
+    <tr>
+    <td>Subject:</td>
+    <td><input name="subject" id="subject" type="text" size="42" value=""></td>
+    </tr>
+    <tr>
+    <td colspan="2"><textarea name="content" id="content" rows="15" cols="42"></textarea></td>
+    </tr>
+    </table>	
+  </fieldset>
+  <fieldset>
+  <legend>Captcha Validation</legend>
+    <table>	
+    <tr>
+    <td><img src="captcha.php" /></td>
+    <td><input style="margin-left:40px;" name="code" id="code" type="text"></td>
+    </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <table>
+    <tr>
+    <td colspan="2"><input style="margin-left:110px;" type="submit" value="Send"><input type="reset" value="Reset"></td>
+    </tr>
+    </table>
+  </fieldset>
+  <input type="hidden" name="submitted" id="submitted" value="TRUE" />
+</form>
+</td>
+<td style="40%">
+<!-- xml view -->
+<div class="c_name">Warehouse</div>
+<div class="c_nfo">
+  Address:
+  10650 Irma Dr. Unit 6<br />
+  Northglenn, CO 80233<br />
+</div>
+<div class="c_name">Joel Plaice</div>
+<div class="c_nfo">
+  President<br />
+  Phone: (720)841-3370<br />
+  E-Mail: <a href="mailto:JoelPlaice@JPASims.net">JoelPlaice@JPASims.net</a><br />
+  E-Mail2: <a href="mailto:JoelPlaice@aol.com">JoelPlaice@aol.com</a><br />
+  Address:
+  10650 Irma Dr. Unit 6<br />
+  Northglenn, CO 80233<br />
+</div>
+<div class="c_name">Steve Plaice</div>
+<div class="c_nfo">
+  Vice President, Business Development<br />
+  Phone: (864)804-7292<br />
+  Phone2: (864)804-7292<br />
+  E-Mail: <a href="mailto:StevePlaice@JPASims.net">StevePlaice@JPASims.net</a><br />
+  Address:
+  10650 Irma Dr. Unit 6<br />
+  Northglenn, CO 80233<br />
+</div>
+<div class="c_name">Steve Robertson</div>
+<div class="c_nfo">
+  Project Engineer<br />
+  E-Mail: <a href="mailto:SteveRobertson@JPASims.net">SteveRobertson@JPASims.net</a><br />
+  Address:
+  10650 Irma Dr. Unit 6<br />
+  Northglenn, CO 80233<br />
+</div>
+<div class="c_name">Evan Plaice</div>
+<div class="c_nfo">
+  Electrical Design Technician/Webmaster<br />
+  E-Mail: <a href="mailto:EvanPlaice@JPASims.net">EvanPlaice@JPASims.net</a><br />
+  Address:
+  10650 Irma Dr. Unit 6<br />
+  Northglenn, CO 80233<br />
+</div>
+<!-- end view -->
+</td>
+</tr>
+</table>
+<br />
+<!-- end template -->
+
+<!--Close Main Body-->
+</div>
+
+<!--Bottom Bar-->
+<div class="bottom_bar"> 
+	<a class="copyright" href="/copyright"></a>
+</div>
+
+<!--Close Main Container-->
+</div>
+</td></tr></table>
+
+<!--Google Analytics Tracker-->
+<script src="http://www.google-analytics.com/urchin.js"></script>
+<script>_uacct = "UA-3478592-1";urchinTracker();</script>
+
+</body>
+</html>
